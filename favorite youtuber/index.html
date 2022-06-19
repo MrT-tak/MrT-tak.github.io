@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Favorite Youtuber List</title>
+        <script>
+            //const return_button = document.getElementById("return_button"); 
+            let parameter = new URLSearchParams(window.location.search);
+            //return_button.outerHTML = `<button href="{parameter}">Return</a>`;
+            function return_button() {
+                parameter.get("from")
+                window.location.href = parameter.get("from");
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="return_button()">return</button>
+    </body>
+</html>
