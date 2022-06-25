@@ -1,4 +1,6 @@
 function scrollCode(element) {
+    if (element === null) return console.log("# is not stated");
+        
     var bodyRect = document.body.getBoundingClientRect(),
         elemRect = document.getElementById(element).getBoundingClientRect(),
         offset   = elemRect.top - bodyRect.top;
