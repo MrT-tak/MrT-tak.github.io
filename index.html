@@ -35,7 +35,10 @@
     <link href="/style.css/" rel="stylesheet" type="text/css">
     <script defer src="LOGINsys/index.js"></script>
     <script defer>
-      const user
+      const userPhoto = document.getElementById('UserPhotoAndName');
+      const userName = document.getElementById('UserName');
+      const userPhotoAndName = document.getElementById('UserPhotoAndName');
+      const userPhoto = document.getElementById('UserPhoto');
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -136,10 +139,14 @@
       #grad1 {
         height: 200px;
         background: red; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+        background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari/ 5.1 to 6.0 */
         background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
         background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
         background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+      }
+
+      footer {
+        background-color: rgba(208, 253, 253, 0.527);
       }
     </style>
   </head>
@@ -201,10 +208,10 @@
               <h4 class="text-white">Your profile</h4>
               
               <div class="dropdown show">
-              <a class="btn dropdown-toggle bggreen" href="#" data-toggle="dropdown"><img placeholder="UNKNOWN USER" src="UNKNOWNUSER.png">YOUR PROFILE</a>
+              <a class="btn dropdown-toggle bggreen" href="#" data-toggle="dropdown">YOUR PROFILE</a>
                 <div class="dropdown-menu">
                   <ul id="User" style="list-style-type: none;">
-                    <li style="list-style-type: none;" class="dropdown-item" href="#"><img id="UserProfilePic" src="UNKOWNUSER.png" style="width: 1cm;"><h1 id="UserProfileName">UNKNOWN</h1></li>
+                    <li style="list-style-type: none;" id="UserPhotoAndName" class="dropdown-item" href="#"><img id="UserProfilePic" src="UNKOWNUSER.png" style="width: 1cm;"><h1 id="UserProfileName">UNKNOWN</h1></li>
                     <li style="list-style-type: none;" id="userProfilePage" class="hide"><a class="dropdown-item" href="#">User.Profile.page</a></li>
                     <li style="list-style-type: none;" class="hide" id="userProfileFriendPage"><a class="dropdown-item" href="#">User.Profile.friends.page</a></li>
                     <li style="list-style-type: none;" class="hide" id="userProfileLogout"><a class="dropdown-item" href="#">logout</a></li>
