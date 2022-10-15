@@ -224,7 +224,7 @@
         <p>
             <h3>Feeder</h3>
             if you have it through chrome extension please <a href="/RSS/Main-feed/Feed.xml">click here</a>.
-            If not then <button> click here to copy the link </button> but if you can not do it link are here: https://mrt-tak.github.io/rss/Main-feed/feed.xml  .
+            If not then <button id="copy-link" class="btn bggreen"> click here to copy the link </button> but if you can not do it link are here: https://mrt-tak.github.io/rss/Main-feed/feed.xml  .
         </p>
     </main>
 
@@ -243,6 +243,27 @@
       </div>
     </footer>
 
+    <script>
+      const copy = document.getElementById("copy-link")
+      
+      copy.addEventListener("click", () => {
+        navigator.clipboard.writeText("https://mrt-tak.github.io/rss/Main-feed/feed.xml").then(
+          (returnedItem) => {
+            /* clipboard successfully set */
+            console.log("copy complete");
+            console.table(returnedItem)
+          },
+          (returnedItem) => {
+            /* clipboard write failed */
+            console.error("copy failed")
+            console.table(returnedItem)
+          }
+        )
+      })
+
+
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
