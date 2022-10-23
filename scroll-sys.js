@@ -1,5 +1,5 @@
 function scrollCode(element) {
-    if (element === null) return console.log("# is not stated");
+    if (element === null) console.log("# is not stated"); return false
         
     var bodyRect = document.body.getBoundingClientRect(),
         elemRect = document.getElementById(element).getBoundingClientRect(),
