@@ -1,0 +1,6 @@
+Sitemap: https://mrt-tak.github.io/sitemap.xml
+Disallow: /file viewer/
+Disallow: /file viewer/*
+Disallow: /LOGIN sys/
+Allow:/
+Disallow: /?*
