@@ -1,0 +1,10 @@
+.externalLinkHighlight:visited {
+    animation-name: changeColorForLinkOpened;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes example {
+    from {color: black;}
+    to {color: blue;}
+  }
