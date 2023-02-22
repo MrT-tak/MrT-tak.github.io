@@ -24,7 +24,10 @@
   <meta property="og:image" content="https://MrT-tak.github.io/backgrand.jpg">
   <meta property="og:url" content="https://mrt-tak.github.io">
   <meta property="og:site_name" content="MrT's Homepage">
-  <meta property="og:type" content="blog">
+  <meta property="og:type" content="profile">
+  <meta property="og:profile:username" content="MrT">
+  <meta property="profile:gender" content="male">
+  <meta property="og:image:alt" content="banner">
   <!--    METAs   Twitter    -->
   <meta name="twitter:card" content="">
   <meta name="twitter:site" content="MrT-tak.github.io">
@@ -357,7 +360,7 @@
                               })
                           </script>
                           <img id="RBLXPIC"
-                            src="https://tr.rbxcdn.com/deb34194bf0ec134b90b4072d66fee0f/48/48/AvatarHeadshot/Png/isCircular"
+                            src="https://tr.rbxcdn.com/290cfbd902bda2cb7023106e690e1c18/30/30/Avatar/Png/isCircular"
                             width="50cm" alt="My roblox user picture" crossorigin="anonymous">
                           My Roblox Profile
                         </a>
@@ -503,7 +506,7 @@
                   <div class="card-body">
                     <h1 style="  font-family: 'MinecraftiaRegular';">
                       My flight Game <span
-                        style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(beta)</b></span>
+                        style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(βeta)</b></span>
                     </h1>
                     <p class="card-text">
                       My flight game! (beta)
@@ -511,15 +514,21 @@
                       70%? market place models.
                     </p>
                   </div>
-                  <a src="https://rblx.games/11392168488">
-                    <button type="button"
-                      class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
-                      data-testid="play-button" style="color: white; width: 100%;">
-                      <a src="https://rblx.games/11392168488">
-                        PLAY
-                      </a>
-                    </button>
-                  </a>
+                  <button type="button" class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
+                    data-testid="play-button" style="color: white; width: 100%;" id="play-RBLX-MFG">
+                    <script>
+                      const MFG = document.getElementById("play-RBLX-MFG").onclick(()=>{
+                        window.location.href = "https://rblx.games/11392168488"
+                      })
+
+                      onlanguagechange(()=>{
+                        echo("hi")
+                      })
+                    </script>
+                    <a src="https://rblx.games/11392168488">
+                      PLAY
+                    </a>
+                  </button>
                 </div>
               </div>
               <div class="col">
@@ -531,7 +540,7 @@
                   <div class="card-body">
                     <h1 style="  font-family: 'MinecraftiaRegular';">
                       Obby<span
-                        style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(beta)</b></span>
+                        style="background-color: yellow; color: black; font-style: italic; font-size: 60%;"><b>(βeta)</b></span>
                     </h1>
                     <p class="card-text">
                       Made with the RBLX template.
