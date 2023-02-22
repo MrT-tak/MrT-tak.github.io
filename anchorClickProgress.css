@@ -1,12 +1,18 @@
 @keyframes page-load {
-    from {
-        background-color: rgb(176, 255, 150);
+    0% {
+        background-color: rgb(144, 105, 105);
+    }
+    40%{
+        background-color: rgb(210, 195, 195);
     }
     50%{
-        background-color: rgb(115, 148, 104);
+        background-color: rgb(255, 242, 242);
     }
-    to {
-        background-color: rgb(144, 105, 105);
+    60% {
+        background-color: rgb(205, 255, 188);
+    }
+    100%{
+        background-color: rgb(176, 255, 150);
     }
 }
 .page-loading::before {
