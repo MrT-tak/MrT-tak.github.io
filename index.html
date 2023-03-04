@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- favicon stuff -->
   <link rel=”icon” href=“/favicon.ico”>
   <link rel="icon" sizes="192x192" href="/favicon.ico">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
-  <link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
 
 
   <!--    METAs    -->
@@ -17,7 +17,7 @@
   <meta name="msvalidate.01" content="3BE9CFA6584B778561D3B688CF00AF35" />
   <!--others-->
   <meta name="description" content="MrT's Website
-    <meta name=" author" content="MrT">
+      <meta name=" author" content="MrT">
   <!--    METAs   Open Graph    -->
   <meta property="og:title" content="MrT's Homepage">
   <meta property="og:description" content="MrT(who likes coding)'s home page">
@@ -39,11 +39,11 @@
   <meta itemprop="name" content="MrT's Homepage">
   <meta itemprop="description" content="MrT(who likes coding)'s home page">
   <meta itemprop="image" content="https://MrT-tak.github.io/backgrand.jpg">
-  <!-- meta name="generator" content="Hugo 0.98.0"> in the alubum template. this is almost all hand crafted -->
+  <!-- meta name="generator" content="Hugo 0.98.0"> in the album template. this is almost all hand crafted -->
   <title>MrT730 HP</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css".
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" .
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -52,7 +52,7 @@
 
   <link rel="stylesheet" href="/anchorClickProgress.css">
   <script src="/anchorClickProgress.js"></script>
-  
+
   <script src="/colorVariable.js"></script>
 
   <script>
@@ -144,12 +144,12 @@
     }
 
     /*ul .user {
-        list-style-type: none;
-      }
-      
-      ul .user li ::marker{
-        display: none; 
-      }*/
+          list-style-type: none;
+        }
+        
+        ul .user li ::marker{
+          display: none; 
+        }*/
 
     #grad1 {
       height: 200px;
@@ -166,8 +166,8 @@
     }
 
     /*.playBtn:hover{
-      color: black;
-    }*/
+        color: black;
+      }*/
 
     body {
       background-color: rgb(176, 255, 150);
@@ -178,9 +178,30 @@
       background-color: rgb(238, 255, 232);
     }
 
-    #about-me::before{
-      background-image: url(https://avatars.githubusercontent.com/u/95097999?v=4);
-      opacity: 0.3;
+    @font-face {
+      font-family: 'MinecraftiaRegular';
+      src: url('/font/minecraftia/Minecraftia-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      cursor: url(file://C:\Windows\Cursors\Custom\タイトルなし.cur) auto;
+    }
+
+    html {
+      accent-color: rgb(176, 255, 150);
+    }
+
+    #AboutMe {
+      background-image: url(/backgroundAbout.png);
+      background-repeat: repeat;
+      background-size: 10%;
+    }
+
+    .textInAbout {
+      background-color: rgba(176, 255, 150, 0.612);
+      border-radius: 10px 10px 0px 9px;
     }
   </style>
 </head>
@@ -201,9 +222,9 @@
         </button>
       </nav>
     </div>
-    
+
     <!--header menu-->
-    <div class="collapse" style="background-color: rgb(144, 105, 105);"  id="navbarHeader">
+    <div class="collapse" style="background-color: rgb(144, 105, 105);" id="navbarHeader">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
@@ -212,6 +233,9 @@
 
               I was born in fukuoka prefecture in Japan. my mother is from fukuoka but my father is from nagoya
               prefecture.
+              <br>
+              <img alt="GitHub commit activity (branch)"
+                src="https://img.shields.io/github/commit-activity/m/MrT-tak/MrT-tak.github.io?color=brightgreen">
             </p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
@@ -219,7 +243,7 @@
             <ul class="list-unstyled">
               <li><!--<a href="https://github.com/MrT-tak/"-->
                 <button class="btn bggreen">
-                <a href="https://github.com/MrT-tak/" class="text-white externalLinkHighlight">GITHUB</a>
+                  <a href="https://github.com/MrT-tak/" class="text-white externalLinkHighlight">GITHUB</a>
                 </button>
               </li>
               <br>
@@ -234,7 +258,8 @@
             <h4 class="text-white">RSS</h4>
             <a href="/RSS/index.html">
               <button class="btn btn-primary bggreen">
-                <img height="9cm" src="https://cdn-icons-png.flaticon.com/512/2504/2504935.png" alt="RSS icon(orange circle with wifi mark tilted 45 degrees)">
+                <img height="9cm" src="https://cdn-icons-png.flaticon.com/512/2504/2504935.png"
+                  alt="RSS icon(orange circle with wifi mark tilted 45 degrees)">
                 RSS
               </button>
             </a>
@@ -243,10 +268,13 @@
             <h4 class="text-white">scroll to...</h4>
             <ul class="list-unstyled">
               <li><button class="btn bggreen"><a href="#" class="text-white">top</a></button></li>
-              <li><button class="btn bggreen"><a href="#AboutMe" class="text-white">Welcome message(About Me)</a></button></li>
-              <li><button class="btn bggreen"><a href="#my-fav-games" class="text-white">my favorite games</a></button></li>
+              <li><button class="btn bggreen"><a href="#AboutMe" class="text-white">Welcome message(About
+                    Me)</a></button></li>
+              <li><button class="btn bggreen"><a href="#my-fav-games" class="text-white">my favorite games</a></button>
+              </li>
               <li><button class="btn bggreen"><a href="#my-friends" class="text-white">my friends</a></button></li>
-              <li><button class="btn bggreen"><a href="#my-rblx-games" class="text-white">my games on roblox</a></button></li>
+              <li><button class="btn bggreen"><a href="#my-rblx-games" class="text-white">my games on
+                    roblox</a></button></li>
             </ul>
           </div>
         </div>
@@ -256,15 +284,14 @@
   </header>
 
   <main>
-    <br id="AboutMe">
     <section class="py-5 text-center container rainbow" id="AboutMe" style=" background-color: rgb(176, 255, 150);width: 100%;padding: 10px;
-        border: 2px solid rgb(137, 72, 71);
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-        color: rgb(99, 36, 36);
-        ">
+          border: 2px solid rgb(137, 72, 71);
+          border-radius: 15px;
+          -moz-border-radius: 15px;
+          color: rgb(99, 36, 36);
+          ">
       <div class="row py-lg-5" style="opacity: 1;">
-        <div class="col-lg-6 col-md-8 mx-auto">
+        <div class="col-lg-6 col-md-8 mx-auto textInAbout">
           <h1 class="fw-light">MrT730 Website</h1>
           <p class="lead text-muted">
           <h1>Welcome to my Website!</h1>
@@ -272,20 +299,21 @@
           <p>
           <h3>Hi I am MrT formally known as MrT730. I like to code and play games.</h3>
           <!--<a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
           </p>
         </div>
       </div>
       <img src="https://avatars.githubusercontent.com/u/95097999?v=4" style="width: 20%;">
-      <div class="d-flex align-items-center justify-content-center">
-        <a href="https://youtube.com/@MrT_tak"><button class="btn">Youtube</button></a>
+      <div class="d-flex align-items-center justify-content-center textInAbout">
+        <a href="https://youtube.com/@MrT_tak"><button class="btn bggreen">Youtube</button></a>
         <a href="https://github.com/MrT-tak/"><button class="btn">Github</button></a>
         <a href="mailto:MrT-tak@outlook.com"><button class="btn">Mail</button></a>
       </div>
     </section>
 
     <div class="alert alert-success" role="alert" style="width: 40%;text-align:center;margin: 0 auto;">
-      Check out <img alt="A.P.T (Anti Pollution Team)" src="/APT.jpg" style="width: 35%;"> to <span style="font-size: minmax(0.5cm, 3cm);">
+      Check out <img alt="A.P.T (Anti Pollution Team)" src="/APT.jpg" style="width: 35%;"> to <span
+        style="font-size: minmax(0.5cm, 3cm);">
         about pollution</span> and <span style="font-size: 1cm;">raise awareness!</span>
       <br>
       <button type="button" class="btn btn-sm btn-outline-secondary">
@@ -293,10 +321,12 @@
           <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube">
           YOUTUBE
         </a>
-        </button>
+      </button>
       <button type="button" class="btn btn-sm btn-outline-secondary">
         <a href="https://antipollutionteam.wixsite.com/ap-team" style="text-decoration: none;">
-          <img src="https://static.wixstatic.com/media/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png/v1/fill/w_1110,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png" width="50cm" alt="website">
+          <img
+            src="https://static.wixstatic.com/media/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png/v1/fill/w_1110,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png"
+            width="50cm" alt="website">
           Website
         </a>
       </button>
@@ -318,7 +348,7 @@
                   class="card-img-top" alt="Minecraft">
 
                 <div class="card-body">
-                  <h1 style="  font-family: 'MinecraftiaRegular';">
+                  <h1 style="font-family: 'MinecraftiaRegular';">
                     MINECRAFT
                   </h1>
                   <p class="card-text">
@@ -478,20 +508,20 @@
               </div>
 
               <!--<div class="col">
-        <a href="">
-            <div class="card shadow-sm" id="roblox">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+          <a href="">
+              <div class="card shadow-sm" id="roblox">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
               <!--<img src="roblox-logo.png" class="card-img-top" alt="roblox logo">
-            
-            <div class="card-body">
-              <img src="roblox-logo.png" class="card-img-top" alt="roblox logo">
-              <p class="card-text">
-                Roblox was my second game the I played. Again I was engage to play because most class mate play this game. I really like this game but in 2022/06/18 it is boring.
-              </p>
+              
+              <div class="card-body">
+                <img src="roblox-logo.png" class="card-img-top" alt="roblox logo">
+                <p class="card-text">
+                  Roblox was my second game the I played. Again I was engage to play because most class mate play this game. I really like this game but in 2022/06/18 it is boring.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      -->
+        -->
             </div>
           </div>
           <div id="my-rblx-games" class="game list">
@@ -514,14 +544,15 @@
                       70%? market place models.
                     </p>
                   </div>
-                  <button type="button" class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
+                  <button type="button"
+                    class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
                     data-testid="play-button" style="color: white; width: 100%;" id="play-RBLX-MFG">
                     <script>
-                      const MFG = document.getElementById("play-RBLX-MFG").onclick(()=>{
+                      const MFG = document.getElementById("play-RBLX-MFG").onclick(() => {
                         window.location.href = "https://rblx.games/11392168488"
                       })
 
-                      onlanguagechange(()=>{
+                      onlanguagechange(() => {
                         echo("hi")
                       })
                     </script>
@@ -567,7 +598,9 @@
             Subscribed channel is a lot so it has a separete page.
             <a href="/subscribed channels/?from=/">Click Here</a>.
           </p>
-
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="text-muted py-5">
@@ -580,19 +613,25 @@
     <!-- copyright and notices --->
     <div class="container">
       <p class="mb-0">
-      <h1>MrT730 Programer's edited version of album example</h1>
-      <p><b>MrT730</b></p>
-      <p>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
-            style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
-        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
-          Attribution-NonCommercial 4.0 International License</a>.
-        <a href="LICENSE.MD" rel="license">CLICK HERE FOR LICENSE.md</a>
-      </p>
-      <p> &copy; Bootstrap for template</p>
-      <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2>
-      <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">Rss icons created by Ruslan Babkin -
-        Flaticon</a>
+        <h1>MrT730 Programer's edited version of album example</h1>
+        <p><b>MrT730</b></p>
+        <p>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
+              style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
+          licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
+            Attribution-NonCommercial 4.0 International License</a>.
+          <a href="LICENSE.MD" rel="license">CLICK HERE FOR LICENSE.md</a>
+        </p>
+        <p> &copy; Bootstrap for template</p>
+
+        <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2>
+
+        <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">
+          Rss icons created by Ruslan Babkin - Flaticon
+        </a>
+        <p>
+          background image in about me section was made by me using sketch school app
+        </p>
       </p>
     </div>
   </footer>
