@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Creative Commons BY-NC 4.0 -->
 <html lang="en">
 
 <head>
@@ -13,11 +14,13 @@
 
 
   <!--    METAs    -->
+
   <!-- bing search tool -->
   <meta name="msvalidate.01" content="3BE9CFA6584B778561D3B688CF00AF35" />
   <!--others-->
-  <meta name="description" content="MrT's Website
-      <meta name=" author" content="MrT">
+  <meta name="description" content="MrT's Website">
+  <meta name=" author" content="MrT">
+  <link rel="license" href="/LICENSE.html" />
   <!--    METAs   Open Graph    -->
   <meta property="og:title" content="MrT's Homepage">
   <meta property="og:description" content="MrT(who likes coding)'s home page">
@@ -54,27 +57,17 @@
   <script src="/anchorClickProgress.js"></script>
 
   <script src="/colorVariable.js"></script>
+  <script src="/scroll-sys.js" defer></script>
 
-  <script>
-    //const avatar = document.getElementById('MrTsavater');
-    //var temp1 = 100;
-    //var temp2 = 100;
-    //if(temp2 != 0){
-    //  temp1 = temp1 - 1;
-    //  avatar.style.width = temp1 + 'cm';
-    //}
-    var navbar = 0;
-    function navigationBarToggled() {
-      if (navbar == 0) {
-
-        navbar = 1;
-      }
-      else if (navbar == 1) {
-
-        navbar = 0;
-      }
+  <style>
+    @font-face {
+      font-family: 'Minecraftia';
+      src: url('/font/minecraftia/Minecraftia-Regular.ttf') format('truetype') local(MinecraftiaRegular);
+      font-weight: normal;
+      font-style: normal;
     }
-  </script>
+  </style>
+
   <style>
     ul .User {
       list-style-type: none;
@@ -178,30 +171,157 @@
       background-color: rgb(238, 255, 232);
     }
 
-    @font-face {
-      font-family: 'MinecraftiaRegular';
-      src: url('/font/minecraftia/Minecraftia-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    body {
-      cursor: url(file://C:\Windows\Cursors\Custom\タイトルなし.cur) auto;
-    }
 
     html {
       accent-color: rgb(176, 255, 150);
+      overflow-x: hidden;
     }
 
     #AboutMe {
       background-image: url(/backgroundAbout.webp);
       background-repeat: repeat;
       background-size: 10%;
+      background-color: rgba(176, 255, 150, 0.881);
+      width: 90%;
     }
 
     .textInAbout {
       background-color: rgba(176, 255, 150, 0.612);
-      border-radius: 10px 10px 0px 9px;
+      border-radius: 30px;
+      border: 2px solid rgba(137, 72, 71, 0.208);
+    }
+
+    main {
+      border-radius: 6px 6px 0px 0px;
+    }
+
+    footer {
+      border-radius: 0px 0px 12px 12px;
+    }
+
+    .btn.bggreen {
+      border-color: black;
+    }
+
+    .btn.bggreen.text-white {
+      border-color: rgba(255, 255, 255, 0.747);
+    }
+
+    #navbarHeader>.container>.row {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /*webkit*/
+    #navbarHeader>.container>.row::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Handle */
+    #navbarHeader>.container>.row::-webkit-scrollbar-thumb {
+      background-color: rgba(153, 220, 131, 0.74);
+      box-shadow: inset 0 0 6px rgba(176, 255, 150, 0.3);
+      padding: 90px;
+      border-radius: 25px;
+    }
+
+    /* width */
+
+    /* Track */
+    #navbarHeader>.container>.row::-webkit-scrollbar-track {
+      background: green;
+      /*border-color: rgb(0, 77, 0);*/
+      border-color: black;
+      border-spacing: 25px;
+    }
+
+    /* Handle on hover */
+    #navbarHeader>.container>.row::-webkit-scrollbar-thumb:hover {
+      background: rgba(176, 255, 150, 0.74);
+    }
+
+    #navbarHeader>.container>.row::-webkit-scrollbar-thumb:active {
+      background-color: rgba(153, 220, 131, 0.74);
+    }
+
+    /* about section font */
+    #AboutMe {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    #AboutMe {
+      font-weight: bold;
+    }
+
+
+
+    #navbarHeader {
+      border-radius: 6px 6px;
+    }
+
+    header>nav {
+      border-radius: 4px;
+    }
+
+    .navbargreen {
+      background-color: rgba(0, 128, 0, 0.97);
+    }
+
+    head {
+      background-color: rgb(0, 128, 0);
+    }
+
+    /* 128.25 */
+    img.card-img-top {
+      height: 10%;
+    }
+  </style>
+  <script>
+    function scrollCode(element) {
+      if (element === null) console.log("# is not stated"); return false
+      console.log(element)
+    }
+
+    function getHash() {
+      var hash = window.location.hash.substr(1);
+      return hash
+    }
+
+    scrollCode(getHash());
+  </script>
+  <style defer>
+    @font-face {
+      font-family: 'UDDigital';
+      src: url("/font/UDDigital/UDDigiKyokashoN-B.ttc") format(ttc);
+      font-weight: bold;
+    }
+
+    .Font-UD {
+      font-family: "UD Digi Kyokasho NK-B", 'UDDigital', Arial, sans-serif !important;
+    }
+
+    @font-face {
+      font-family: 'Spring';
+      src: url("https://www.1001fonts.com/download/font/spring.regular.ttf") format(ttf);
+    }
+
+    .Font-Spring {
+      font-family: 'Spring' !important;
+    }
+  </style>
+  <style>
+    .text-stroke-lime {
+      -webkit-text-stroke: 0.029cm;
+      -webkit-text-stroke-color: rgb(176, 255, 150);
+    }
+
+    .text-stroke-lime-min {
+      -webkit-text-stroke: 0.02cm;
+      -webkit-text-stroke-color: rgb(176, 255, 150);
+    }
+
+    .head-menu {
+      background-color: rgb(144, 105, 105);
     }
   </style>
 </head>
@@ -209,11 +329,11 @@
 <body>
   <header class="sticky-top">
     <!-- header -->
-    <div class="navbar navbar-dark bggreen shadow-sm">
+    <nav class="navbar navbar-dark navbargreen shadow-sm">
       <nav class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
           <img src="https://avatars.githubusercontent.com/u/95097999?v=4" alt="MrT's profile logo" id="MrTsavater"
-            width="50cm">
+            width="50cm" loading="eager" fetchpriority="high">
           <strong>MrT's Homepage</strong>
         </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
@@ -221,10 +341,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </nav>
-    </div>
+    </nav>
 
     <!--header menu-->
-    <div class="collapse" style="background-color: rgb(144, 105, 105);" id="navbarHeader">
+    <div class="collapse head-menu" id="navbarHeader">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
@@ -234,21 +354,22 @@
               I was born in fukuoka prefecture in Japan. my mother is from fukuoka but my father is from nagoya
               prefecture.
               <br>
-              <img alt="GitHub commit activity (branch)"
-                src="https://img.shields.io/github/commit-activity/m/MrT-tak/MrT-tak.github.io?color=brightgreen">
+              <img alt="GitHub commit(aka update) on main activity"
+                src="https://img.shields.io/github/commit-activity/m/MrT-tak/MrT-tak.github.io?color=brightgreen&label=updated"
+                loading="lazy" fetchpriority="low">
             </p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Contact</h4>
             <ul class="list-unstyled">
               <li><!--<a href="https://github.com/MrT-tak/"-->
-                <button class="btn bggreen">
+                <button class="btn bggreen text-white">
                   <a href="https://github.com/MrT-tak/" class="text-white externalLinkHighlight">GITHUB</a>
                 </button>
               </li>
               <br>
               <li>
-                <button class="btn bggreen" id="mailMe">
+                <button class="btn bggreen text-white" id="mailMe">
                   <a href="mailto:MrT-tak@outlook.com" class="text-white">Email me</a>
                 </button>
               </li>
@@ -257,9 +378,9 @@
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">RSS</h4>
             <a href="/RSS/index.html">
-              <button class="btn btn-primary bggreen">
+              <button class="btn btn-primary bggreen text-white">
                 <img height="9cm" src="https://cdn-icons-png.flaticon.com/512/2504/2504935.png"
-                  alt="RSS icon(orange circle with wifi mark tilted 45 degrees)">
+                  alt="RSS icon(orange circle with wifi mark tilted 45 degrees)" loading="lazy" fetchpriority="low">
                 RSS
               </button>
             </a>
@@ -267,13 +388,18 @@
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">scroll to...</h4>
             <ul class="list-unstyled">
-              <li><button class="btn bggreen"><a href="#" class="text-white">top</a></button></li>
-              <li><button class="btn bggreen"><a href="#AboutMe" class="text-white">Welcome message(About
+              <li><button class="btn bggreen text-white"><a href="#" class="text-white">top</a></button></li>
+
+              <li><button class="btn bggreen text-white"><a href="#AboutMe" class="text-white">Welcome message(About
                     Me)</a></button></li>
-              <li><button class="btn bggreen"><a href="#my-fav-games" class="text-white">my favorite games</a></button>
-              </li>
-              <li><button class="btn bggreen"><a href="#my-friends" class="text-white">my friends</a></button></li>
-              <li><button class="btn bggreen"><a href="#my-rblx-games" class="text-white">my games on
+
+              <li><button class="btn bggreen text-white"><a href="#my-fav-games" class="text-white">my favorite
+                    games</a></button></li>
+
+              <li><button class="btn bggreen text-white"><a href="#my-friends" class="text-white">my
+                    friends</a></button></li>
+
+              <li><button class="btn bggreen text-white"><a href="#my-rblx-games" class="text-white">my games on
                     roblox</a></button></li>
             </ul>
           </div>
@@ -292,33 +418,36 @@
           ">
       <div class="row py-lg-5" style="opacity: 1;">
         <div class="col-lg-6 col-md-8 mx-auto textInAbout">
-          <h1 class="fw-light">MrT730 Website</h1>
+          <h1 class="fw-light Font-UD" style="font-family: 'UDDigital', 'minecraftia', sans-serif; font-weight: bold;">
+            MrT730
+            Website</h1>
           <p class="lead text-muted">
           <h1>Welcome to my Website!</h1>
           </p>
           <p>
-          <h3>Hi I am MrT formally known as MrT730. I like to code and play games.</h3>
+          <p style="font-size: 1.75rem;" class="Font-UD">Hi I am MrT formally known as MrT730. I like to code and play
+            games.</p>
           <!--<a href="#" class="btn btn-primary my-2">Main call to action</a>
             <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
           </p>
         </div>
       </div>
-      <img src="https://avatars.githubusercontent.com/u/95097999?v=4" style="width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/95097999?v=4" style="width: 20%;" loading="lazy" alt="avatar of MrT">
       <div class="d-flex align-items-center justify-content-center textInAbout">
-        <a href="https://youtube.com/@MrT_tak"><button class="btn bggreen">Youtube</button></a>
-        <a href="https://github.com/MrT-tak/"><button class="btn bggreen">Github</button></a>
-        <a href="mailto:MrT-tak@outlook.com"><button class="btn bggreen">Mail</button></a>
+        <a href="https://youtube.com/@MrT_tak"><button class="btn bggreen text-white">Youtube</button></a>
+        <a href="https://github.com/MrT-tak/"><button class="btn bggreen text-white">Github</button></a>
+        <a href="mailto:MrT-tak@outlook.com"><button class="btn bggreen text-white">Mail</button></a>
       </div>
     </section>
 
-    <div class="alert alert-success" role="alert" style="width: 40%;text-align:center;margin: 0 auto;">
-      Check out <img alt="A.P.T (Anti Pollution Team)" src="/APT.jpg" style="width: 35%;"> to <span
-        style="font-size: minmax(0.5cm, 3cm);">
-        about pollution</span> and <span style="font-size: 1cm;">raise awareness!</span>
+    <div class="alert alert-success Font-Spring" role="alert" style="width: 40%;text-align:center;margin: 0 auto;">
+      Check out <img alt="A.P.T (Anti Pollution Team)" src="/APT.jpg" style="width: 35%;" loading="lazy"> to <span
+        style="font-size: minmax(0.5cm, 3cm);" class="Font-Spring">
+        about pollution</span> and <span style="font-size: 1cm;" class="Font-Spring">raise awareness!</span>
       <br>
       <button type="button" class="btn btn-sm btn-outline-secondary">
         <a href="https://www.youtube.com/@antipollutionteamofficial2142">
-          <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube">
+          <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube" loading="lazy">
           YOUTUBE
         </a>
       </button>
@@ -326,7 +455,7 @@
         <a href="https://antipollutionteam.wixsite.com/ap-team" style="text-decoration: none;">
           <img
             src="https://static.wixstatic.com/media/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png/v1/fill/w_1110,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png"
-            width="50cm" alt="website">
+            width="50cm" alt="website" loading="lazy">
           Website
         </a>
       </button>
@@ -345,10 +474,10 @@
                 <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                 <img
                   src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Xbox_Minecraft_WildUpdate_Main_.Net_1170x500.jpg.transform/minecraft-image-large/image.jpg"
-                  class="card-img-top" alt="Minecraft">
+                  class="card-img-top" alt="Minecraft" loading="lazy">
 
                 <div class="card-body">
-                  <h1 style="font-family: 'MinecraftiaRegular';">
+                  <h1 style="font-family: 'Minecraftia';">
                     MINECRAFT
                   </h1>
                   <p class="card-text">
@@ -361,10 +490,10 @@
             <div class="col">
               <div class="card shadow-sm" id="roblox">
                 <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <img src="roblox-logo.png" class="card-img-top" alt="roblox">
+                <img src="roblox-logo.png" class="card-img-top" alt="roblox" loading="lazy">
 
                 <div class="card-body">
-                  <!--<img src="roblox-logo.png" class="card-img-top" alt="roblox logo">-->
+                  <!--<notusedimg src="roblox-logo.png" class="card-img-top" alt="roblox logo">-->
                   <p class="card-text">
                     Roblox was my second game the I played. Again I was engage to play because most class mate play this
                     game. WHY ROBLOX KEEP CRASHING BRO
@@ -375,7 +504,7 @@
                     <div class="btn-group" style="text-decoration: none">
                       <button type="button" class="btn btn-sm btn-outline-secondary">
                         <a href="https://rblx.name/2754868392" style="text-decoration: none;">
-                          <script>
+                          <!--<script>
                             var opts = {
                               "headers": {
                                 "mode": "cors"
@@ -388,11 +517,16 @@
                                 console.log(res.status) // 200
                                 return res.json()
                               })
-                          </script>
+                          </script>-->
                           <img id="RBLXPIC"
-                            src="https://tr.rbxcdn.com/290cfbd902bda2cb7023106e690e1c18/30/30/Avatar/Png/isCircular"
-                            width="50cm" alt="My roblox user picture" crossorigin="anonymous">
+                            src="https://tr.rbxcdn.com/bea5530630851ddf98a3afd78c4d5489/150/150/AvatarHeadshot/Png"
+                            width="50cm" alt="My roblox user picture" crossorigin="anonymous" loading="lazy">
                           My Roblox Profile
+                        </a>
+                      </button>
+                      <button class="btn bggreen text-white">
+                        <a href="#my-rblx-games" class="text-white">
+                          my games on roblox
                         </a>
                       </button>
                     </div>
@@ -415,10 +549,10 @@
                   <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                   <img
                     src="https://yt3.googleusercontent.com/fi4dCJD1TcNgAADtej-gMZkgoMGQvCOUtHywq7-N4Fl1RbX7wAhNGoYmd7QmqVqdImtb8s9cUA=s176-c-k-c0x00ffffff-no-rj"
-                    class="card-img-top" alt="JustJack">
+                    class="card-img-top" alt="JustJack" loading="lazy">
 
                   <div class="card-body">
-                    <h1 style="font-family: 'MinecraftiaRegular';">
+                    <h1 style="font-family: 'Minecraftia';">
                       JustJack
                     </h1>
                     <p class="card-text">
@@ -426,7 +560,7 @@
                       <button type="button" class="btn btn-sm btn-outline-secondary">
                         <a href="https://block-by-Block-dev-team.github.io" style="text-decoration: none; color:black">
                           <img src="https://avatars.githubusercontent.com/u/96121929?s=200&amp;v=4" width="50cm"
-                            alt="Block by Block logo">
+                            alt="Block by Block logo" loading="lazy">
                           Block by Block
                         </a>
                       </button> which I am in.
@@ -437,7 +571,8 @@
                       <div class="btn-group" style="text-decoration: none">
                         <button type="button" class="btn btn-sm btn-outline-secondary">
                           <a href="https://www.youtube.com/@JustJackYouTube">
-                            <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube">
+                            <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
+                              loading="lazy">
                             YOUTUBE
                           </a>
                         </button>
@@ -449,10 +584,11 @@
               <div class="col">
                 <div class="card shadow-sm" id="NatiCreator">
                   <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                  <img src="https://naticreator.com/assets/img/avataaars.svg" class="card-img-top" alt="NatiCreator">
+                  <img src="https://naticreator.com/assets/img/avataaars.svg" class="card-img-top" alt="NatiCreator"
+                    loading="lazy">
 
                   <div class="card-body">
-                    <h1 style="font-family: 'MinecraftiaRegular';">
+                    <h1 style="font-family: 'Minecraftia';">
                       NatiCreator
                     </h1>
                     <p class="card-text">
@@ -462,15 +598,18 @@
                   <a herf="naticreator.com">
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group" style="text-decoration: none">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          style="border-radius: 5px 0px 0px 5px;">
                           <a href="http://naticreator.com/">
-                            <img src="http://naticreator.com/assets/img/avataaars.svg" width="50cm" alt="website">
+                            <img src="http://naticreator.com/assets/img/avataaars.svg" width="50cm" alt="website"
+                              loading="lazy">
                             His Homepage
                           </a>
                         </button>
                         <button type="button" class="btn btn-sm btn-outline-secondary">
                           <a href="https://www.youtube.com/channel/UCk672yED_Z5u5vTgNY8nlog/">
-                            <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube">
+                            <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
+                              loading="lazy">
                             YOUTUBE
                           </a>
                         </button>
@@ -484,10 +623,10 @@
                   <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                   <img
                     src="https://yt3.ggpht.com/g9D5iB9xezWRj8jzi0FI59VqU-Gpb9fuvTbDJ2Hw2x8zec7PY-LGTD3GK7jn3chVjzwfqqxT4w=s176-c-k-c0x00ffffff-no-rj"
-                    class="card-img-top" alt="PolyGame">
+                    class="card-img-top" alt="PolyGame" loading="lazy">
 
                   <div class="card-body">
-                    <h1 style="font-family: 'MinecraftiaRegular';">
+                    <h1 style="font-family: 'Minecraftia';">
                       PolyGame
                     </h1>
                     <p class="card-text">
@@ -498,7 +637,8 @@
                     <div class="btn-group" style="text-decoration: none">
                       <button type="button" class="btn btn-sm btn-outline-secondary">
                         <a href="https://www.youtube.com/channel/UC7j7e_ozxR7LXjpHLM9O_yQ">
-                          <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube">
+                          <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
+                            loading="lazy">
                           YOUTUBE
                         </a>
                       </button>
@@ -531,10 +671,10 @@
                 <div class="card shadow-sm" id="rblx-My-flight-game">
                   <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                   <img src="https://tr.rbxcdn.com/87b4d8f394c2447c8a2408f9fefcbd40/768/432/Image/Png"
-                    class="card-img-top" alt="My flight game">
+                    class="card-img-top" alt="My flight game" loading="lazy">
 
                   <div class="card-body">
-                    <h1 style="  font-family: 'MinecraftiaRegular';">
+                    <h1 style="  font-family: 'Minecraftia';">
                       My flight Game <span
                         style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(βeta)</b></span>
                     </h1>
@@ -566,10 +706,10 @@
                 <div class="card shadow-sm" id="rblx-My-flight-game">
                   <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                   <img src="https://t2.rbxcdn.com/45b31d4505d514928adfca9a7271d55e" class="card-img-top"
-                    alt="My flight game">
+                    alt="My flight game" loading="lazy">
 
                   <div class="card-body">
-                    <h1 style="  font-family: 'MinecraftiaRegular';">
+                    <h1 style="  font-family: 'Minecraftia';">
                       Obby<span
                         style="background-color: yellow; color: black; font-style: italic; font-size: 60%;"><b>(βeta)</b></span>
                     </h1>
@@ -613,25 +753,30 @@
     <!-- copyright and notices --->
     <div class="container">
       <p class="mb-0">
-        <h1>MrT730 Programer's edited version of album example</h1>
-        <p><b>MrT730</b></p>
-        <p>
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
-              style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
-          licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
-            Attribution-NonCommercial 4.0 International License</a>.
-          <a href="LICENSE.MD" rel="license">CLICK HERE FOR LICENSE.md</a>
-        </p>
-        <p> &copy; Bootstrap for template</p>
+      <h1>MrT730 Programer's edited version of album example</h1>
+      <p><b>MrT730</b></p>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
+            style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
+            loading="lazy" /></a><br />This work is
+        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
+          Attribution-NonCommercial 4.0 International License</a>.
+        <a href="/LICENSE.html" rel="license">CLICK HERE FOR LICENSE.html(decoded from MD)</a>
+      </p>
+      <p> &copy; Bootstrap for template</p>
 
-        <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2>
+      <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2>
 
-        <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">
-          Rss icons created by Ruslan Babkin - Flaticon
-        </a>
-        <p>
-          background image in about me section was made by me using sketch school app
-        </p>
+      <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">
+        Rss icons created by Ruslan Babkin - Flaticon
+      </a>
+      <p>
+        background image in about me section was made by me using sketch school app
+      </p>
+      <p>
+      <p>Font: Spring is licensed under the 1001Fonts Free For Commercial Use License (FFC)</p>
+      <p class="font-UD"><abbr title="Universal Design">UD</abbr> Font is a font used in Japanese text books</p>
+      </p>
       </p>
     </div>
   </footer>
@@ -639,7 +784,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="scroll-sys.js"></script>
 </body>
 
 </html>
