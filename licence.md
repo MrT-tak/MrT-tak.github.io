@@ -1,4 +1,4 @@
-Attribution-NonCommercial 4.0 International
+Attribution-NonCommercial 4.0 International licence
 
 copyright (c) 2023 Takumi Fujiyama
 
