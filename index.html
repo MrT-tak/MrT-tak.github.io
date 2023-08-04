@@ -29,7 +29,7 @@
   <meta property="og:site_name" content="MrT's Homepage">
   <meta property="og:type" content="profile">
   <meta property="og:profile:username" content="MrT">
-  <meta property="profile:gender" content="male">
+  <meta property="og:profile:gender" content="male">
   <meta property="og:image:alt" content="banner">
   <!--    METAs   Twitter    -->
   <meta name="twitter:card" content="">
@@ -51,22 +51,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- slide bar css -->
   <link rel="stylesheet" href="/slideBarStyle.css">
+  <!-- global css -->
+  <link rel="stylesheet" href="global.css">
+  <script src="global.js" modular></script>
 
-  <link rel="stylesheet" href="/anchorClickProgress.css">
-  <script src="/anchorClickProgress.js"></script>
+  <!-- unloader -->
+  <link rel="stylesheet" href="/unloader.css">
+  <script src="/unloader.js"></script>
 
-  <script src="/colorVariable.js"></script>
+
   <script src="/scroll-sys.js" defer></script>
+  <script src="/colorVariable.js"></script>
 
-  <style>
-    @font-face {
-      font-family: 'Minecraftia';
-      src: url('/font/minecraftia/Minecraftia-Regular.ttf') format('truetype') local(MinecraftiaRegular);
-      font-weight: normal;
-      font-style: normal;
-    }
-  </style>
+  <link rel="stylesheet" href="/externallinkmark.css">
+
+  <link rel="stylesheet" href="/navLinkCopyStyle.css" defer>
+  <script defer src="/navLinkCopyScript.js"></script>
 
   <style>
     ul .User {
@@ -129,7 +132,7 @@
       overflow-x: auto;
       text-align: center;
       white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
+      /*-webkit-overflow-scrolling: touch;*/
     }
 
     .User li {
@@ -289,26 +292,7 @@
 
     scrollCode(getHash());
   </script>
-  <style defer>
-    @font-face {
-      font-family: 'UDDigital';
-      src: url("/font/UDDigital/UDDigiKyokashoN-B.ttc") format(ttc);
-      font-weight: bold;
-    }
-
-    .Font-UD {
-      font-family: "UD Digi Kyokasho NK-B", 'UDDigital', Arial, sans-serif !important;
-    }
-
-    @font-face {
-      font-family: 'Spring';
-      src: url("https://www.1001fonts.com/download/font/spring.regular.ttf") format(ttf);
-    }
-
-    .Font-Spring {
-      font-family: 'Spring' !important;
-    }
-  </style>
+  <link rel="stylesheet" href="font.css" media="none" onload="if(media!=='all')media='all'"><!-- font -->
   <style>
     .text-stroke-lime {
       -webkit-text-stroke: 0.029cm;
@@ -331,7 +315,7 @@
     <!-- header -->
     <nav class="navbar navbar-dark navbargreen shadow-sm">
       <nav class="container">
-        <a href="#" class="navbar-brand d-flex align-items-center">
+        <a href="/" class="navbar-brand d-flex align-items-center">
           <img src="https://avatars.githubusercontent.com/u/95097999?v=4" alt="MrT's profile logo" id="MrTsavater"
             width="50cm" loading="eager" fetchpriority="high">
           <strong>MrT's Homepage</strong>
@@ -405,8 +389,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <span id="page-loading-space"></span>
+      <span id="page-loading-space"></span>
   </header>
 
   <main>
@@ -418,35 +401,41 @@
           ">
       <div class="row py-lg-5" style="opacity: 1;">
         <div class="col-lg-6 col-md-8 mx-auto textInAbout">
-          <h1 class="fw-light Font-UD" style="font-family: 'UDDigital', 'minecraftia', sans-serif; font-weight: bold;">
+          <h1 class="fw-light Font-UD">
+            <!-- style="font-family: 'UDDigital', 'minecraftia', sans-serif; font-weight: bold;" -->
             MrT730
-            Website</h1>
+            Website
+          </h1>
           <p class="lead text-muted">
-          <h1>Welcome to my Website!</h1>
+          <h1>Welcome to my <span class="font-comic_sans">Website</span>!</h1>
           </p>
           <p>
-          <p style="font-size: 1.75rem;" class="Font-UD">Hi I am MrT formally known as MrT730. I like to code and play
-            games.</p>
+          <p style="font-size: 1.75rem;" class="Font-UD">Hi I am MrT formally known as MrT730. I like to code and
+            play games.</p>
           <!--<a href="#" class="btn btn-primary my-2">Main call to action</a>
             <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
           </p>
         </div>
       </div>
-      <img src="https://avatars.githubusercontent.com/u/95097999?v=4" style="width: 20%;" loading="lazy" alt="avatar of MrT">
+      <img src="https://avatars.githubusercontent.com/u/95097999?v=4" style="width: 20%;" loading="lazy"
+        alt="avatar of MrT">
       <div class="d-flex align-items-center justify-content-center textInAbout">
         <a href="https://youtube.com/@MrT_tak"><button class="btn bggreen text-white">Youtube</button></a>
         <a href="https://github.com/MrT-tak/"><button class="btn bggreen text-white">Github</button></a>
         <a href="mailto:MrT-tak@outlook.com"><button class="btn bggreen text-white">Mail</button></a>
       </div>
     </section>
+    <a href="javascript:void(0)" onclick="copyNavLink('AboutMe')" class="navLinkCopy text-center"
+      style="height: 10%; width: 10%;">#</a>
 
     <div class="alert alert-success Font-Spring" role="alert" style="width: 40%;text-align:center;margin: 0 auto;">
       Check out <img alt="A.P.T (Anti Pollution Team)" src="/APT.jpg" style="width: 35%;" loading="lazy"> to <span
         style="font-size: minmax(0.5cm, 3cm);" class="Font-Spring">
-        about pollution</span> and <span style="font-size: 1cm;" class="Font-Spring">raise awareness!</span>
+        about pollution</span> and <span style="font-size: 1cm;" class="Font-Spring">raise awareness about
+        nature!</span>
       <br>
       <button type="button" class="btn btn-sm btn-outline-secondary">
-        <a href="https://www.youtube.com/@antipollutionteamofficial2142">
+        <a href="https://www.youtube.com/@antipollutionteamofficial2142" class="NoYTLinkIcon">
           <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube" loading="lazy">
           YOUTUBE
         </a>
@@ -467,191 +456,284 @@
         <!--My fav GAME LIST-->
 
         <div id="my-fav-games" class="game list">
-          <h1>My Favorite games</h1>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm" id="minecraft">
-                <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <img
-                  src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Xbox_Minecraft_WildUpdate_Main_.Net_1170x500.jpg.transform/minecraft-image-large/image.jpg"
-                  class="card-img-top" alt="Minecraft" loading="lazy">
-
-                <div class="card-body">
-                  <h1 style="font-family: 'Minecraftia';">
-                    MINECRAFT
-                  </h1>
-                  <p class="card-text">
-                    Minecraft was my first game the I played. I was engage to play because most class mate play this
-                    game. I really like this game.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card shadow-sm" id="roblox">
-                <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <img src="roblox-logo.png" class="card-img-top" alt="roblox" loading="lazy">
-
-                <div class="card-body">
-                  <!--<notusedimg src="roblox-logo.png" class="card-img-top" alt="roblox logo">-->
-                  <p class="card-text">
-                    Roblox was my second game the I played. Again I was engage to play because most class mate play this
-                    game. WHY ROBLOX KEEP CRASHING BRO
-                  </p>
-                </div>
-                <div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group" style="text-decoration: none">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">
-                        <a href="https://rblx.name/2754868392" style="text-decoration: none;">
-                          <!--<script>
-                            var opts = {
-                              "headers": {
-                                "mode": "cors"
-                              }
-                            }
-                            var url = "https://thumbnails.roblox.com/v1/users/avatar?userIds=2754868392&size=30x30&format=Png&isCircular=true"
-                            fetch(url, JSON.stringify(opts))
-                              .then(res => {
-                                console.log(res.ok) // true
-                                console.log(res.status) // 200
-                                return res.json()
-                              })
-                          </script>-->
-                          <img id="RBLXPIC"
-                            src="https://tr.rbxcdn.com/bea5530630851ddf98a3afd78c4d5489/150/150/AvatarHeadshot/Png"
-                            width="50cm" alt="My roblox user picture" crossorigin="anonymous" loading="lazy">
-                          My Roblox Profile
-                        </a>
-                      </button>
-                      <button class="btn bggreen text-white">
-                        <a href="#my-rblx-games" class="text-white">
-                          my games on roblox
-                        </a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- FRIENDS LIST -->
-
-
-          <div id="my-friends" class="friend list">
-            <h1>My Friends</h1>
-
+          <h1>My Favorite games<a onclick="copyNavLink('my-fav-games')" class="navLinkCopy"
+              href="javascript:void(0)">#</a></h1>
+          <h2 id="my-fav-game-PC-game">PC game<a onclick="copyNavLink('my-fav-game-PC-game')" class="navLinkCopy"
+              href="javascript:void(0)">#</a></h1>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm" id="JustJack">
-                  <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                  <img
-                    src="https://yt3.googleusercontent.com/fi4dCJD1TcNgAADtej-gMZkgoMGQvCOUtHywq7-N4Fl1RbX7wAhNGoYmd7QmqVqdImtb8s9cUA=s176-c-k-c0x00ffffff-no-rj"
-                    class="card-img-top" alt="JustJack" loading="lazy">
 
+
+              <template> <!-- lorem-img-top is the card top image -->
+                <div class="col">
+                  <div class="card shadow-sm" id="roblox">
+
+                    <img src="https://www.nintendo.co.jp/wii/img_cmn/wii_logo.gif" class="card-img-top" alt="Wii logo"
+                      loading="lazy">
+
+                    <div class="card-body">
+                      <p class="card-text">
+                        I have played some of the wii games
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <div class="col">
+                <a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">#</a>
+
+                <div class="card shadow-sm" id="minecraft">
+                  <div class="card-img-top" style="position: relative; text-align: center;">
+                    <img src="https://www.minecraft.net/content/dam/minecraft/home/home-hero-1200x600.jpg"
+                      class="card-img-top"
+                      alt="Minecraft background, Steve, Alex and a wolf(like a dog) watching a horizon with a village from a cliff with tree. A official artwork"
+                      loading="lazy" style="width: 100%; height: 100%;">
+                    <img src="https://www.minecraft.net/content/dam/games/minecraft/logos/logo-minecraft.svg"
+                      alt="Minecraft logo"
+                      style="max-width: 60%; top: 10%;left: 10%; z-index: 100; position: absolute;">
+                  </div>
                   <div class="card-body">
-                    <h1 style="font-family: 'Minecraftia';">
-                      JustJack
-                    </h1>
                     <p class="card-text">
-                      JustJack Is My Friend Jack which is owner of
-                      <button type="button" class="btn btn-sm btn-outline-secondary">
-                        <a href="https://block-by-Block-dev-team.github.io" style="text-decoration: none; color:black">
-                          <img src="https://avatars.githubusercontent.com/u/96121929?s=200&amp;v=4" width="50cm"
-                            alt="Block by Block logo" loading="lazy">
-                          Block by Block
-                        </a>
-                      </button> which I am in.
+                      <b><img src="https://pngimg.com/d/minecraft_PNG9.png" alt="Minecraft logo"
+                          style="max-width: 20%;"></b> was my first game<sup>*1</sup> the I played. I was engage to play
+                      because most class mate play this game. I really like this game.
+                    </p>
+                    <p class="card-footer">
+                      <img class="card-img-bottom Font-Minecraftia" style="height: 1cm; width: 1cm;"
+                        alt="MrT's minecraft skin"
+                        src="https://api.mineatar.io/head/25842019b74e44d59b2accf406afc347?scale=16">
+                      MrT730
+                    </p>
+                    <img src="https://api.mineatar.io/body/full/25842019-b74e-44d5-9b2a-ccf406afc347"
+                      style="height: 1%;">
+                    <p class="card-footer" style="font-size: 1%; background: none;"><sup>*1</sup> may have played
+                      Mario
+                      cart, Mario tennis, Wii sport and other wii games before this time <frame>
                     </p>
                   </div>
-                  <div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                          <a href="https://www.youtube.com/@JustJackYouTube">
-                            <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
-                              loading="lazy">
-                            YOUTUBE
-                          </a>
-                        </button>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm" id="roblox">
+
+                    <img src="roblox-logo.png" class="card-img-top" alt="roblox" loading="lazy">
+
+                    <div class="card-body">
+                      <!--<not used img src="roblox-logo.png" class="card-img-top" alt="roblox logo">-->
+                      <p class="card-text">
+                        Roblox was my second game the I played. Again I was engage to play because most class mate
+                        play this game.
+                      </p>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group" style="text-decoration: none">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">
+                            <a href="https://rblx.name/2754868392" style="text-decoration: none;">
+                              <!--<script>
+                        var opts = {
+                          "headers": {
+                            "mode": "cors"
+                          }
+                        }
+                        var url = "https://thumbnails.roblox.com/v1/users/avatar?userIds=2754868392&size=30x30&format=Png&isCircular=true"
+                        fetch(url, JSON.stringify(opts))
+                          .then(res => {
+                            console.log(res.ok) // true
+                            console.log(res.status) // 200
+                            return res.json()
+                          })
+                      </script>-->
+                              <img id="RBLXPIC"
+                                src="https://tr.rbxcdn.com/bea5530630851ddf98a3afd78c4d5489/150/150/AvatarHeadshot/Png"
+                                width="50cm" alt="My roblox user picture" crossorigin="anonymous" loading="lazy">
+                              My Roblox Profile
+                            </a>
+                          </button>
+                          <button class="btn bggreen text-white">
+                            <a href="#my-rblx-games" class="text-white">
+                              my games on roblox
+                          </button>
+                          <button class="btn bggreen text-white"><a href="https://plsdonate.me/@tak_MrT"
+                              class="text-white">Donate Robux to me!</a></button>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card shadow-sm" id="NatiCreator">
-                  <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                  <img src="https://naticreator.com/assets/img/avataaars.svg" class="card-img-top" alt="NatiCreator"
-                    loading="lazy">
+              <h2 id="my-fav-game-console-game">console games</h1><a onclick="copyNavLink('my-fav-game-console-game')"
+                  class="navLinkCopy" href="javascript:void(0)">
+                  <h3><span style="display:none;">Wii</span></h3>
+                  <img src="https://www.nintendo.co.jp/wii/img_cmn/wii_logo.gif" alt="wii logo"> <br>
+                  I have played some of the wii games before 2022 and still to this day! Here is some of the games in
+                  wii that
+                  I
+                  like(aka what I have played mostly):
+                  <ul>
+                    <li><b><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wii_Party">Wii
+                          Party</a></b>
+                    </li>
+                    <li><b><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wii_Fit">Wii Fit</a>
+                        and <a target="_blank" rel="noopener"
+                          href="https://en.wikipedia.org/wiki/Wii_Fit#Wii_Fit_Plus">fit
+                          plus</a></b></li>
+                    <li><b><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Go_Vacation">Go
+                          Vacation</a></b></li>
+                  </ul>
 
-                  <div class="card-body">
-                    <h1 style="font-family: 'Minecraftia';">
-                      NatiCreator
-                    </h1>
-                    <p class="card-text">
-                      NatiCreator Is My Friend Nathaniel.
-                    </p>
-                  </div>
-                  <a herf="naticreator.com">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button type="button" class="btn btn-sm btn-outline-secondary"
-                          style="border-radius: 5px 0px 0px 5px;">
-                          <a href="http://naticreator.com/">
-                            <img src="http://naticreator.com/assets/img/avataaars.svg" width="50cm" alt="website"
-                              loading="lazy">
-                            His Homepage
-                          </a>
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                          <a href="https://www.youtube.com/channel/UCk672yED_Z5u5vTgNY8nlog/">
-                            <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
-                              loading="lazy">
-                            YOUTUBE
-                          </a>
-                        </button>
+                  <h3>switch</h3>
+
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <template> <!-- lorem-img-top is the card top image -->
+                      <div class="col">
+                        <div class="card shadow-sm" id="roblox">
+
+                          <img src="https://www.nintendo.co.jp/wii/img_cmn/wii_logo.gif" class="card-img-top"
+                            alt="Wii logo" loading="lazy">
+
+                          <div class="card-body">
+                            <p class="card-text">
+                              I have played some of the wii games
+                            </p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                    <div class="col">
+                      <div class="card shadow-sm" id="roblox">
+
+                        <img src="https://www.nintendo.co.jp/wii/img_cmn/wii_logo.gif" class="card-img-top"
+                          alt="Wii logo" loading="lazy">
+
+                        <div class="card-body">
+                          <p class="card-text">
+                            I have played some of the wii games
+                          </p>
+
+                        </div>
                       </div>
                     </div>
-                  </a>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm" id="PolyGame">
-                  <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                  <img
-                    src="https://yt3.ggpht.com/g9D5iB9xezWRj8jzi0FI59VqU-Gpb9fuvTbDJ2Hw2x8zec7PY-LGTD3GK7jn3chVjzwfqqxT4w=s176-c-k-c0x00ffffff-no-rj"
-                    class="card-img-top" alt="PolyGame" loading="lazy">
-
-                  <div class="card-body">
-                    <h1 style="font-family: 'Minecraftia';">
-                      PolyGame
-                    </h1>
-                    <p class="card-text">
-                      My friend PolyGame.
-                    </p>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group" style="text-decoration: none">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">
-                        <a href="https://www.youtube.com/channel/UC7j7e_ozxR7LXjpHLM9O_yQ">
-                          <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
-                            loading="lazy">
-                          YOUTUBE
-                        </a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <!--<div class="col">
+                  <!-- FRIENDS LIST -->
+
+
+                  <div id="my-friends" class="friend list">
+                    <h1>My Friends</h1><a onclick="copyNavLink('my-friends')" class="navLinkCopy"
+                      href="javascript:void(0)"></a>
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                      <div class="col">
+                        <div class="card shadow-sm" id="JustJack">
+
+                          <img
+                            src="https://yt3.googleusercontent.com/qqBT1QmP2DiHr-tCMDnaH1MWUzT1MvVhncwwWzXIm7hM_GYUfHmi9ltBSGPAeRHthe3J9XU1-Iw=s176-c-k-c0x00ffffff-no-rj"
+                            class="card-img-top" alt="JustJack" loading="lazy">
+
+                          <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                              JustJack<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                              JustJack Is My Friend Jack which is owner of
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                                <a target="_blank" rel="noopener"" href=" https://block-by-Block-dev-team.github.io"
+                                  style="text-decoration: none; color:black">
+                                  <img src="https://avatars.githubusercontent.com/u/96121929?s=200&amp;v=4" width="50cm"
+                                    alt="Block by Block logo" loading="lazy">
+                                  Block by Block
+                                </a>
+                              </button> which I am in.
+                            </p>
+                          </div>
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group" style="text-decoration: none">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                  <a href="https://www.youtube.com/@JustJackYouTube">
+                                    <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
+                                      loading="lazy">
+                                    YOUTUBE
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm" id="NatiCreator">
+
+                          <img src="https://naticreator.com/assets/img/avataaars.svg" class="card-img-top"
+                            alt="NatiCreator" loading="lazy">
+
+                          <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                              NatiCreator<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                              NatiCreator Is My Friend Nathaniel.
+                            </p>
+                          </div>
+                          <a href="naticreator.com">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group" style="text-decoration: none">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"
+                                  style="border-radius: 5px 0px 0px 5px;">
+                                  <a href="http://naticreator.com/">
+                                    <img src="http://naticreator.com/assets/img/avataaars.svg" width="50cm"
+                                      alt="website" loading="lazy">
+                                    His Homepage
+                                  </a>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                  <a href="https://www.youtube.com/channel/UCk672yED_Z5u5vTgNY8nlog/">
+                                    <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
+                                      loading="lazy">
+                                    YOUTUBE
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm" id="PolyGame">
+                          <img
+                            src="https://yt3.ggpht.com/g9D5iB9xezWRj8jzi0FI59VqU-Gpb9fuvTbDJ2Hw2x8zec7PY-LGTD3GK7jn3chVjzwfqqxT4w=s176-c-k-c0x00ffffff-no-rj"
+                            class="card-img-top" alt="PolyGame" loading="lazy">
+
+                          <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                              PolyGame<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">#</a>
+                            </h1>
+                            <p class="card-text">
+                              My friend PolyGame.
+                            </p>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group" style="text-decoration: none">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                                <a href="https://www.youtube.com/channel/UC7j7e_ozxR7LXjpHLM9O_yQ">
+                                  <img src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
+                                    loading="lazy">
+                                  YOUTUBE
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--<div class="col">
           <a href="">
               <div class="card shadow-sm" id="roblox">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-              <!--<img src="roblox-logo.png" class="card-img-top" alt="roblox logo">
+                      <!--<img src="roblox-logo.png" class="card-img-top" alt="roblox logo">
               
               <div class="card-body">
                 <img src="roblox-logo.png" class="card-img-top" alt="roblox logo">
@@ -662,85 +744,87 @@
             </div>
           </div>
         -->
-            </div>
-          </div>
-          <div id="my-rblx-games" class="game list">
-            <h1>My Roblox games</h1>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm" id="rblx-My-flight-game">
-                  <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                  <img src="https://tr.rbxcdn.com/87b4d8f394c2447c8a2408f9fefcbd40/768/432/Image/Png"
-                    class="card-img-top" alt="My flight game" loading="lazy">
-
-                  <div class="card-body">
-                    <h1 style="  font-family: 'Minecraftia';">
-                      My flight Game <span
-                        style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(βeta)</b></span>
-                    </h1>
-                    <p class="card-text">
-                      My flight game! (beta)
-                      <br>
-                      70%? market place models.
-                    </p>
+                    </div>
                   </div>
-                  <button type="button"
-                    class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
-                    data-testid="play-button" style="color: white; width: 100%;" id="play-RBLX-MFG">
-                    <script>
-                      const MFG = document.getElementById("play-RBLX-MFG").onclick(() => {
-                        window.location.href = "https://rblx.games/11392168488"
-                      })
+                  <div id="my-rblx-games" class="game list">
+                    <h1>My Roblox games</h1><a onclick="copyNavLink('')" class="navLinkCopy"
+                      href="javascript:void(0)"></a>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                      <div class="col">
+                        <div class="card shadow-sm" id="rblx-My-flight-game">
 
-                      onlanguagechange(() => {
-                        echo("hi")
-                      })
-                    </script>
-                    <a src="https://rblx.games/11392168488">
-                      PLAY
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm" id="rblx-My-flight-game">
-                  <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                  <img src="https://t2.rbxcdn.com/45b31d4505d514928adfca9a7271d55e" class="card-img-top"
-                    alt="My flight game" loading="lazy">
+                          <img src="https://tr.rbxcdn.com/87b4d8f394c2447c8a2408f9fefcbd40/768/432/Image/Png"
+                            class="card-img-top" alt="My flight game" loading="lazy">
 
-                  <div class="card-body">
-                    <h1 style="  font-family: 'Minecraftia';">
-                      Obby<span
-                        style="background-color: yellow; color: black; font-style: italic; font-size: 60%;"><b>(βeta)</b></span>
-                    </h1>
-                    <p class="card-text">
-                      Made with the RBLX template.
-                    </p>
+                          <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                              My flight Game <span
+                                style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(βeta)</b></span>
+                            </h1><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
+                              <p class="card-text">
+                                My flight game! (beta)
+                                <br>
+                                70%? market place models.
+                              </p>
+                          </div>
+                          <button type="button"
+                            class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
+                            data-testid="play-button" style="color: white; width: 100%;" id="play-RBLX-MFG">
+                            <script>
+                              const MFG = document.getElementById("play-RBLX-MFG").onclick(() => {
+                                window.location.href = "https://rblx.games/11392168488"
+                              })
+
+                              onlanguagechange(() => {
+                                echo("hi")
+                              })
+                            </script>
+                            <a src="https://rblx.games/11392168488">
+                              PLAY
+                            </a>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm" id="rblx-My-flight-game">
+
+                          <img src="https://t2.rbxcdn.com/45b31d4505d514928adfca9a7271d55e" class="card-img-top"
+                            alt="My flight game" loading="lazy">
+
+                          <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                              Obby<span
+                                style="background-color: yellow; color: black; font-style: italic; font-size: 60%;"><b>(βeta)</b></span>
+                            </h1><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
+                              <p class="card-text">
+                                Made with the RBLX template.
+                              </p>
+                          </div>
+                          <a src="https://rblx.games/11878058995">
+                            <button type="button"
+                              class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
+                              data-testid="play-button" style="color: white; width: 100%;"><a
+                                src="https://rblx.games/11878058995">PLAY</a></button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
-                  <a src="https://rblx.games/11878058995">
-                    <button type="button"
-                      class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
-                      data-testid="play-button" style="color: white; width: 100%;"><a
-                        src="https://rblx.games/11878058995">PLAY</a></button>
-                  </a>
-                </div>
-              </div>
+                  <h1 id="favorite-youtuber">Favorite Youtuber</h1><a onclick="copyNavLink('')" class="navLinkCopy"
+                    href="javascript:void(0)">
+                    <p>
+                      Favorite Youtuber is a lot so it has a separete page.
+                      <a href="/favorite youtuber/index.html?from=/">Click Here</a>
+                    </p>
+                    <h1 id="subed-chan">Subscribed channel</h1><a onclick="copyNavLink('')" class="navLinkCopy"
+                      href="javascript:void(0)">
+                      <p>
+                        Subscribed channel is a lot so it has a separete page.
+                        <a href="/subscribed channels/?from=/">Click Here</a>.
+                      </p>
             </div>
-
-          </div>
-          <h1 id="favorite-youtuber">Favorite Youtuber</h1>
-          <p>
-            Favorite Youtuber is a lot so it has a separete page.
-            <a href="/favorite youtuber/index.html?from=/">Click Here</a>
-          </p>
-          <h1 id="subed-chan">Subscribed channel</h1>
-          <p>
-            Subscribed channel is a lot so it has a separete page.
-            <a href="/subscribed channels/?from=/">Click Here</a>.
-          </p>
         </div>
-      </div>
-    </div>
   </main>
 
   <footer class="text-muted py-5">
@@ -753,19 +837,28 @@
     <!-- copyright and notices --->
     <div class="container">
       <p class="mb-0">
-      <h1>MrT730 Programer's edited version of album example</h1>
-      <p><b>MrT730</b></p>
-      <p>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
-            style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
-            loading="lazy" /></a><br />This work is
-        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
-          Attribution-NonCommercial 4.0 International License</a>.
-        <a href="/LICENSE.html" rel="license">CLICK HERE FOR LICENSE.html(decoded from MD)</a>
-      </p>
-      <p> &copy; Bootstrap for template</p>
+      <h1>MrT730 Programer's edited version of album example</h1><a onclick="copyNavLink('')" class="navLinkCopy"
+        href="javascript:void(0)">
+        <p><b>MrT730</b></p>
+        <p>
+          <a target="_blank" rel="noopener" rel=" license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
+              alt="Creative Commons License" style="border-width:0"
+              src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
+          licensed under a <a target="_blank" rel="noopener" rel=" license"
+            href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
+            Attribution-NonCommercial 4.0 International License</a> unless noted otherwise.
+          <a target="_blank" rel="noopener" href=" /LICENSE.html" rel="license">CLICK HERE FOR LICCENSE.md</a>.
 
-      <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2>
+          Mainly the images that is from the photographs directory(I mean by page) and subdirectories(I mean by pages
+          inside of /photographs/ pages) are usually licensed under the same license with CC-BY NC(the website's
+          license).
+
+        </p>
+        <p> &copy; Bootstrap for template</p>
+
+        <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h1><a
+            onclick="copyNavLink('')" class="navLinkCopy">#</a>
+      </a>
 
       <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">
         Rss icons created by Ruslan Babkin - Flaticon
@@ -777,12 +870,17 @@
       <p>Font: Spring is licensed under the 1001Fonts Free For Commercial Use License (FFC)</p>
       <p class="font-UD"><abbr title="Universal Design">UD</abbr> Font is a font used in Japanese text books</p>
       </p>
-      </p>
+      <a target="_blank" href="https://icons8.com/icon/22028/mail" rel="noopener">Mail icon by Icons8</a>
+      <a target="_blank" href="https://icons8.com/icon/68r18jerXB_P/youtube" rel="noopener">YouTube icon by
+        Icons8</a>
+
+
+
+
     </div>
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
