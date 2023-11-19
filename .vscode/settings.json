@@ -1,8 +1,10 @@
 {
-    "cSpell.words": [
-        "Minecraftia"
-    ],
-    "githubPullRequests.ignoredPullRequestBranches": [
-        "main"
-    ]
+  "cSpell.words": [
+    "Babkin",
+    "Facciatone",
+    "Metropolitana",
+    "Minecraftia",
+    "QOLII"
+  ],
+  "githubPullRequests.ignoredPullRequestBranches": ["main"]
 }

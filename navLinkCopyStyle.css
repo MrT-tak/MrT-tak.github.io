@@ -1,0 +1,14 @@
+.navLinkCopy{
+    /* display: none; */
+    color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+
+.navLinkCopy:hover{
+    /* display: inherit; */
+    height: auto;
+    width: auto;
+    color: var(--BbB-brown) !important;
+}

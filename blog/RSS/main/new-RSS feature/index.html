@@ -6,22 +6,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--    METAs    -->
+  <!-- favicon stuff -->
   <link rel=”icon” href=“/favicon.ico”>
-  <!--others-->
-  <title>MrT730 HP</title>
-  <link rel="license" href="/LICENSE.html" />
-  <meta name="description" content="MrT's Website">
-  <meta name="author" content="MrT">
+  <link rel="icon" sizes="192x192" href="/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon" />
+
+
+  <!--    METAs    -->
+
   <!-- bing search tool -->
   <meta name="msvalidate.01" content="3BE9CFA6584B778561D3B688CF00AF35" />
+  <!--others-->
+  <meta name="description" content="MrT's Website">
+  <meta name=" author" content="MrT">
+  <link rel="license" href="/LICENSE.html" />
   <!--    METAs   Open Graph    -->
   <meta property="og:title" content="MrT's Homepage">
   <meta property="og:description" content="MrT(who likes coding)'s home page">
   <meta property="og:image" content="https://MrT-tak.github.io/backgrand.jpg">
   <meta property="og:url" content="https://mrt-tak.github.io">
   <meta property="og:site_name" content="MrT's Homepage">
-  <meta property="og:type" content="blog">
+  <meta property="og:type" content="profile">
+  <meta property="og:profile:username" content="MrT">
+  <meta property="og:profile:gender" content="male">
   <meta property="og:image:alt" content="banner">
   <!--    METAs   Twitter    -->
   <meta name="twitter:card" content="">
@@ -34,23 +42,34 @@
   <meta itemprop="name" content="MrT's Homepage">
   <meta itemprop="description" content="MrT(who likes coding)'s home page">
   <meta itemprop="image" content="https://MrT-tak.github.io/backgrand.jpg">
+  <!-- meta name="generator" content="Hugo 0.98.0"> in the album template. this is almost all hand crafted -->
+  <title>MrT730 HP</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" .
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- slide bar css -->
+  <link rel="stylesheet" href="/slideBarStyle.css">
+  <!-- global css -->
+  <link rel="stylesheet" href="global.css">
+  <script src="global.js" modular></script>
+
+  <!-- unloader -->
+  <link rel="stylesheet" href="/unloader.css">
+  <script src="/unloader.js"></script>
 
 
-  <!-- meta name="generator" content="Hugo 0.98.0">-->
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/asd" type="text/css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/slideBarStyle.css/" rel="stylesheet" type="text/css">
-  <script defer src="LOGINsys/index.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <link rel="stylesheet" href="/slideBarStyle.css" type="text/css" />
-
+  <script src="/scroll-sys.js" defer></script>
   <script src="/colorVariable.js"></script>
 
+  <link rel="stylesheet" href="/externallinkmark.css">
+
+  <link rel="stylesheet" href="/navLinkCopyStyle.css" defer>
+  <script defer src="/navLinkCopyScript.js"></script>
 
   <style>
     ul .User {
@@ -113,7 +132,7 @@
       overflow-x: auto;
       text-align: center;
       white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
+      /*-webkit-overflow-scrolling: touch;*/
     }
 
     .User li {
@@ -121,12 +140,12 @@
     }
 
     /*ul .user {
-        list-style-type: none;
-      }
-      
-      ul .user li ::marker{
-        display: none;
-      }*/
+          list-style-type: none;
+        }
+        
+        ul .user li ::marker{
+          display: none; 
+        }*/
 
     #grad1 {
       height: 200px;
@@ -141,7 +160,176 @@
       background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
       /* Standard syntax (must be last) */
     }
+
+    /*.playBtn:hover{
+        color: black;
+      }*/
+
+    body {
+      background-color: rgb(176, 255, 150);
+    }
+
+    main,
+    footer {
+      background-color: rgb(238, 255, 232);
+    }
+
+
+    html {
+      accent-color: rgb(176, 255, 150);
+      overflow-x: hidden;
+    }
+
+    #AboutMe {
+      background-image: url(/backgroundAbout.webp);
+      background-repeat: repeat;
+      background-size: 10%;
+      background-color: rgba(176, 255, 150, 0.881);
+      width: 90%;
+    }
+
+    .textInAbout {
+      background-color: rgba(176, 255, 150, 0.612);
+      border-radius: 30px;
+      border: 2px solid rgba(137, 72, 71, 0.208);
+    }
+
+    main {
+      border-radius: 6px 6px 0px 0px;
+    }
+
+    footer {
+      border-radius: 0px 0px 12px 12px;
+    }
+
+    .btn.bggreen {
+      border-color: black;
+    }
+
+    .btn.bggreen.text-white {
+      border-color: rgba(255, 255, 255, 0.747);
+    }
+
+    #navbarHeader>.container>.row {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /*webkit*/
+    #navbarHeader>.container>.row::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Handle */
+    #navbarHeader>.container>.row::-webkit-scrollbar-thumb {
+      background-color: rgba(153, 220, 131, 0.74);
+      box-shadow: inset 0 0 6px rgba(176, 255, 150, 0.3);
+      padding: 90px;
+      border-radius: 25px;
+    }
+
+    /* width */
+
+    /* Track */
+    #navbarHeader>.container>.row::-webkit-scrollbar-track {
+      background: green;
+      /*border-color: rgb(0, 77, 0);*/
+      border-color: black;
+      border-spacing: 25px;
+    }
+
+    /* Handle on hover */
+    #navbarHeader>.container>.row::-webkit-scrollbar-thumb:hover {
+      background: rgba(176, 255, 150, 0.74);
+    }
+
+    #navbarHeader>.container>.row::-webkit-scrollbar-thumb:active {
+      background-color: rgba(153, 220, 131, 0.74);
+    }
+
+    /* about section font */
+    #AboutMe {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    #AboutMe {
+      font-weight: bold;
+    }
+
+
+
+    #navbarHeader {
+      border-radius: 6px 6px;
+    }
+
+    header>nav {
+      border-radius: 4px;
+    }
+
+    .navbargreen {
+      background-color: rgba(0, 128, 0, 0.97);
+    }
+
+    head {
+      background-color: rgb(0, 128, 0);
+    }
+
+    /* 128.25 */
+    img.card-img-top {
+      height: 10%;
+    }
   </style>
+  <script>
+    function scrollCode(element) {
+      if (element === null) console.log("# is not stated"); return false
+      console.log(element)
+    }
+
+    function getHash() {
+      var hash = window.location.hash.substr(1);
+      return hash
+    }
+
+    scrollCode(getHash());
+  </script>
+  <link rel="stylesheet" href="./font.css" media="none" onload="if(media!=='all')media='all'"><!-- font -->
+  <style>
+    .text-stroke-lime {
+      -webkit-text-stroke: 0.029cm;
+      -webkit-text-stroke-color: rgb(176, 255, 150);
+    }
+
+    .text-stroke-lime-min {
+      -webkit-text-stroke: 0.02cm;
+      -webkit-text-stroke-color: rgb(176, 255, 150);
+    }
+
+    .head-menu {
+      background-color: rgb(144, 105, 105);
+    }
+
+    main {
+      min-height: 60vh;
+    }
+
+    footer,
+    footer div {
+      background-color: gray;
+      color: rgb(57, 57, 57);
+      border-radius: 12px 12px 0px 0px;
+    }
+
+    footer a {
+      color: black;
+    }
+
+    main {
+      border-radius: 9px;
+      margin: 5%;
+      padding: 4%;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -228,21 +416,54 @@
   </header>
 
   <main>
-    <h1>New RSS feature</h1>
-    <h3>posting update, blogs and more!</h3>
-    <p>
-    <p>
-      Hi everyone this is MrT and TODAY I will be (I am soo excited today)that I have finally a RSS feature which I will
-      be posting update changelogs, blogs and more.
-      If you wish to use RSS click the button below.
-    </p>
-    <a target="_blank" rel="noopener"" href=" /RSS/index.html"><button class="btn btn-primary bggreen"><img height="9cm"
-          src="https://wp-assets.rss.com/blog/wp-content/uploads/2019/10/10111557/social_style_3_rss-512-1.png"
-          alt="RSS icon(orange circle with wifi mark tilted 45 degrees)"></button></a>
-    <p>
-      Happy coding and have a GRATE day!
-    </p>
-    </p>
+    <article>
+      <h1>New RSS feature</h1>
+      <h3>posting update, blogs and more!</h3>
+      <p>
+      <p>
+        Hi everyone this is MrT,
+        and TODAY I will be (I am soo excited today)that I have finally a RSS feature which I will
+        be posting update changelogs, blogs and more.
+        If you wish to use RSS click the button below.
+      </p>
+      <a target="_blank" rel="noopener" href=" /RSS/index.html"><button class="btn btn-primary bggreen"><img
+            height="9cm"
+            src="https://wp-assets.rss.com/blog/wp-content/uploads/2019/10/10111557/social_style_3_rss-512-1.png"
+            alt="RSS icon(orange circle with wifi mark tilted 45 degrees)"></button></a>
+      <p>
+        Happy coding and have a GRATE day!
+      </p>
+      </p>
+    </article>
+    <div>
+      <!-- comment section -->
+      Let's chat! Any questions please post it here.
+      <!-- GiTalk init -->
+      <link rel="stylesheet" href="/blog/template/GT.css">
+      <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+      <div id="gitalk-container">
+        <h1>Please wait for gitalk to load</h1><progress style="accent-color: var(BbB-lime-green);"></progress>
+      </div>
+      <script defer>
+        // const gitalk = require('gitalk')
+        //     require('gitalk/dist/gitalk.css')
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const myGitalk = new Gitalk(
+            {
+              clientID: '8c4fbd64f04025afaf07',
+              clientSecret: "c469ea56c1f8916d383c505c850978d4bd5bba0f",
+              //clientSecret: `${GH_GITALK}`,
+              repo: 'mrt-tak.github.io',
+              owner: 'mrt-tak',
+              admin: ['mrt-tak'],
+              id: `comment-${location.pathname}`,
+              proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+            });
+          myGitalk.render('gitalk-container');
+        });
+      </script>
+    </div>
   </main>
 
 
@@ -252,21 +473,63 @@
         <a href="#">Back to top</a>
       </p>
       <p class="mb-1">MrT730 HP</p>
+    </div>
+    <!-- copyright and notices --->
+    <div class="container">
       <p class="mb-0">
-      <h1>MrT730 Programer's edited version of album example</h1>
-      <p><b>MrT730</b></p>
+      <h1>MrT730 Programer's edited version of album example</h1><a onclick="copyNavLink('')" class="navLinkCopy"
+        href="javascript:void(0)">
+        <p><b>MrT730</b></p>
+        <p>
+          <a target="_blank" rel="noopener" rel=" license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
+              alt="Creative Commons License" style="border-width:0"
+              src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
+          licensed under a <a target="_blank" rel="noopener" rel=" license"
+            href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
+            Attribution-NonCommercial 4.0 International License</a> unless noted otherwise.
+          <a target="_blank" rel="noopener" href=" /LICENSE.html" rel="license">CLICK HERE FOR
+            LICCENSE.md</a>.
+
+          Mainly the images that is from the photographs directory(I mean by page) and subdirectories(I mean
+          by pages
+          inside of /photographs/ pages) are usually licensed under the same license with CC-BY NC(the
+          website's
+          license).
+
+        </p>
+        <p> &copy; Bootstrap for template</p>
+
+        <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h1><a
+            onclick="copyNavLink('')" class="navLinkCopy">#</a>
+      </a>
+
+      <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">
+        Rss icons created by Ruslan Babkin - Flaticon
+      </a>
       <p>
-        <a target="_blank" rel="noopener"" rel=" license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
-            alt="Creative Commons License" style="border-width:0"
-            src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
-        licensed under a <a target="_blank" rel="noopener"" rel=" license"
-          href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative Commons
-          Attribution-NonCommercial 4.0 International License</a> unless noted otherwise.
-        <a target="_blank" rel="noopener"" href=" /LICENSE.html" rel="license">CLICK HERE FOR LICCENSE.md</a>
-      </p>
-      <p> &copy; Bootstrap for template</p>
-      <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2>
-      </p>
+        Thanks to all these people:
+      <ul>
+        <li>blog writer and/or these blog:
+          <ol>
+            <li></li>
+          </ol>,
+        </li>
+        <li></li>
+        </p>
+        <p>
+          background image in about me section was made by me using sketch school app
+        </p>
+        <p>
+        <p>Font: Spring is licensed under the 1001Fonts Free For Commercial Use License (FFC)</p>
+        <p class="font-UD"><abbr title="Universal Design">UD</abbr> Font is a font used in Japanese text books</p>
+        </p>
+        <a target="_blank" href="https://icons8.com/icon/22028/mail" rel="noopener">Mail icon by Icons8</a>
+        <a target="_blank" href="https://icons8.com/icon/68r18jerXB_P/youtube" rel="noopener">YouTube icon by
+          Icons8</a>
+
+
+
+
     </div>
   </footer>
 

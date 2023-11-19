@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('/font/minecraftia/Minecraftia-Regular.ttf') format('truetype') !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Font-Minecraftia {
+    font-family: "Minecraftia" 'Minecraft-ten' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+@font-face {
+    font-family: 'Minecraft-ten';
+    src: url('/font/Minecraft-ten/MinecraftTen-VGORe.ttf') format('truetype') !important;
+}
+
+.Font-Minecraft_ten {
+    font-family: "Minecraft-ten" 'Minecraftia' !important;
+
+}
+
+.font-comic_sans {
+    font-family: 'Comic Sans MS'
+    cursive !important;
+}
+
+@font-face {
+    font-family: "UDDigital";
+    src: url("/font/UDDigital/UDDigiKyokashoN-B.ttc") format(ttc);
+    font-weight: bold;
+}
+
+.Font-UD {
+    font-family: "UD Digi Kyokasho NK-B", "UDDigital", Arial, sans-serif !important;
+}
+
+@font-face {
+    font-family: "Spring";
+    src: url("https://www.1001fonts.com/download/font/spring.regular.ttf") format(ttf);
+}
+
+.Font-Spring {
+    font-family: "Spring" !important;
+}
+
+@font-face {
+    font-family: "colorTube";
+    src: url('./font/ColorTube/Commercial/TTF/ColorTube-Regular.ttf');
+    src: url('./font/ColorTube/Commercial/OTF/ColorTube-Regular.otf') format('opentype'),
+    /*url('path/filename.woff2') format('woff2'), 
+    url('path/filename.woff') format('woff'),*/
+    /* url('./font/ColorTube/Commercial/TTF/ColorTube-Regular.ttf') format('truetype'); */
+}
+
+.font-ColorTube{
+    font-family: "colorTube", "UDdigital";
+}

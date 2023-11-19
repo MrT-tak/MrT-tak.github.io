@@ -7,7 +7,8 @@
       "default",
       {
         "ignore": [
-          "accent-color"
+          "accent-color",
+          "scroll-behavior"
         ]
       }
     ],
@@ -26,6 +27,7 @@
         "nested-interactive": "off"
       }
     ],
-    "axe/structure": "off"
+    "axe/structure": "off",
+    "no-inline-styles": "off"
   }
 }

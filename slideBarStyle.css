@@ -15,7 +15,7 @@ The first applies to the thumb of the scrollbar, the second to the track. */
   background-color: rgba(153, 220, 131, 0.74);
   box-shadow: inset 0 0 6px rgba(176, 255, 150, 0.3);
   padding: 90px;
-  border-radius: 25px;
+  border-radius: 100px;
 }
 /* width */
 
