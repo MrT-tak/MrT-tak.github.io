@@ -274,7 +274,7 @@
             background-color: rgb(0, 128, 0);
         }
 
-        /* 128.25 */ 
+        /* 128.25 */
         img.card-img-top {
             height: 10%;
         }
@@ -308,6 +308,9 @@
             background-color: rgb(144, 105, 105);
         }
     </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -405,142 +408,254 @@
         }
     </style>
     <main>
-        <h1 class="text-center font-ColorTube">Welcome to music library: LIBRA</h1>
-        <h3 class="text-center font-ColorTube">here contains music created by MrT!</h3>
-        <p>These music have been created in GarageBand app and with some music containing apple loops</p>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <script defer>
-                const colunums = document.getElementsByClassName("col")
-                col.forEach(element => {
-                    console.log(element)
-                });
-            </script>
-            <div class="col">
-                <div class="card shadow-sm" id="">
+        <div>
+            <h1 class="text-center font-ColorTube">Welcome to music library: LIBRA</h1>
+            <h3 class="text-center font-ColorTube">here contains music created by MrT!</h3>
+            <p>These music have been created in GarageBand app and with some music containing apple loops</p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <script defer>
+                    const colunums = document.getElementsByClassName("col")
+                    col.forEach(element => {
+                        console.log(element)
+                    });
+                </script>
+                <div class="col">
+                    <div class="card shadow-sm" id="">
 
-                    <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
 
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            8-bitter<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/8-bitter.m4a"></audio>
-                        </p>
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                8-bitter<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/8-bitter.m4a"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm" id="Boss">
+                <div class="col">
+                    <div class="card shadow-sm" id="Boss">
 
-                    <img src="https://picsum.photos/200/200/?blur=10&N=2" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
+                        <img src="https://picsum.photos/200/200/?blur=10&N=2" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
 
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            Boss<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/Boss.m4a"></audio>
-                        </p>
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                Boss<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/Boss.m4a"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm" id="DJ">
+                <div class="col">
+                    <div class="card shadow-sm" id="DJ">
 
-                    <img src="https://picsum.photos/200/200/?blur=10&N=3" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
+                        <img src="https://picsum.photos/200/200/?blur=10&N=3" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
 
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            DJ<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/DJ.m4a"></audio>
-                        </p>
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                DJ<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/DJ.m4a"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm" id="funky afternoon">
+                <div class="col">
+                    <div class="card shadow-sm" id="funky afternoon">
 
-                    <img src="https://picsum.photos/200/200/?blur=10&N=4" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
+                        <img src="https://picsum.photos/200/200/?blur=10&N=4" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
 
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            funky afternoon<a onclick="copyNavLink('')" class="navLinkCopy"
-                                href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/Funky afternoon .m4a"></audio>
-                        </p>
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                funky afternoon<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/Funky afternoon .m4a"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm" id="funky afternoon-longer">
+                <div class="col">
+                    <div class="card shadow-sm" id="funky afternoon-longer">
 
-                    <img src="https://picsum.photos/200/200/?blur=10&N=5" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
+                        <img src="https://picsum.photos/200/200/?blur=10&N=5" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
 
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            funky afternoon longer<a onclick="copyNavLink('')" class="navLinkCopy"
-                                href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/Funky afternoon long.m4a"></audio>
-                        </p>
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                funky afternoon longer<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/Funky afternoon long.m4a"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm" id="">
-            
-                    <img src="https://picsum.photos/200/200/?blur=10&N=7" class="card-img-top" alt="'s cover image" loading="lazy">
-            
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            Upbeat day<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/Upbeat day.m4a"></audio>
-                        </p>
+                <div class="col">
+                    <div class="card shadow-sm" id="">
+
+                        <img src="https://picsum.photos/200/200/?blur=10&N=7" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
+
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                Upbeat day<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/Upbeat day.m4a"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm" id="NopeV2">
+                <div class="col">
+                    <div class="card shadow-sm" id="NopeV2">
 
-                    <img src="https://picsum.photos/200/200/?blur=10&N=6" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
+                        <img src="https://picsum.photos/200/200/?blur=10&N=6" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
 
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            Nope V2<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                Nope V2<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                                <p class="card-text">
+                            </h1>
+                            </p>
                             <audio controls src="./music/Nope v2.m4a"></audio>
-                        </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                    </div>
+
+                    <div class="card shadow-sm" id="Nope"> <img src="https://picsum.photos/200/200/?blur=10&N=7"
+                            class="card-img-top" alt="'s cover image" loading="lazy">
+                        <div class="card-body">
+
+                            Nope<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            <h1 class="Font-Minecraftia">
+                                <p class="card-text">
+                            </h1>
+                            </p>
+                            <audio controls src="./music/Nope.m4a"></audio>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card shadow-sm" id="Nope">
-
-                    <img src="https://picsum.photos/200/200/?blur=10&N=7" class="card-img-top" alt="'s cover image"
-                        loading="lazy">
-
-                    <div class="card-body">
-                        <h1 class="Font-Minecraftia">
-                            Nope<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                        </h1>
-                        <p class="card-text">
-                            <audio controls src="./music/Nope.m4a"></audio>
-                        </p>
+        </div>
+        <div>
+            <h1 class="text-center font-ColorTube">Welcome to music library: LIBRA</h1>
+            <h3 class="text-center font-ColorTube">here contains music created for StickmanAdventures by MrT and the CodebyCode Music Team!</h3>
+            <p>These music have been created in GarageBand app and with some music containing apple loops</p>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <script defer>
+                    const colunums = document.getElementsByClassName("col")
+                    col.forEach(element => {
+                        console.log(element)
+                    });
+                </script>
+                <div class="col">
+                    <div class="card shadow-sm" id="" data-lightbox="galley">
+        
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image"
+                            loading="lazy">
+        
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                StickmanAdventures Main Menu<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/StickmanAdventuresMusic/.mp3"></audio>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm" id="" data-lightbox="galley">
+                
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image" loading="lazy">
+                
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                StickmanAdventures Main Menu<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/StickmanAdventuresMusic/.mp3"></audio>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm" id="" data-lightbox="galley">
+                
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image" loading="lazy">
+                
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                StickmanAdventures Main Menu<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/StickmanAdventuresMusic/.mp3"></audio>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm" id="" data-lightbox="galley">
+                
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image" loading="lazy">
+                
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                StickmanAdventures Main Menu<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/StickmanAdventuresMusic/.mp3"></audio>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm" id="" data-lightbox="galley">
+                
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image" loading="lazy">
+                
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                StickmanAdventures Main Menu<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/StickmanAdventuresMusic/.mp3"></audio>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm" id="" data-lightbox="galley">
+                
+                        <img src="https://picsum.photos/200/200/?blur=10&N=1" class="card-img-top" alt="'s cover image" loading="lazy">
+                
+                        <div class="card-body">
+                            <h1 class="Font-Minecraftia">
+                                StickmanAdventures Main Menu<a onclick="copyNavLink('')" class="navLinkCopy"
+                                    href="javascript:void(0)"></a>
+                            </h1>
+                            <p class="card-text">
+                                <audio controls src="./music/StickmanAdventuresMusic/.mp3"></audio>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
