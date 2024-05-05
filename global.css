@@ -2,3 +2,656 @@ html {
   accent-color: rgb(176, 255, 150);
   scroll-behavior: smooth;
 }
+
+main {
+  background-color: white !important;
+  border-radius: 10px;
+}
+
+.footer{
+  background-color: gray;
+  color: black;
+}
+
+.navbargreen {
+  background-color: rgba(0, 128, 0, 0.97);
+}
+
+.text-stroke-lime {
+  -webkit-text-stroke: 0.029cm;
+  -webkit-text-stroke-color: rgb(176, 255, 150);
+}
+
+.text-stroke-lime-min {
+  -webkit-text-stroke: 0.02cm;
+  -webkit-text-stroke-color: rgb(176, 255, 150);
+}
+
+.head-menu {
+  background-color: rgb(144, 105, 105);
+}
+
+ul .User {
+  list-style-type: none;
+}
+
+header {
+  color: white;
+}
+
+.bggreen {
+  background-color: green;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  /*-webkit-overflow-scrolling: touch;*/
+}
+
+.User li {
+  list-style-type: none;
+}
+
+/*ul .user {
+          list-style-type: none;
+        }
+        
+        ul .user li ::marker{
+          display: none; 
+        }*/
+
+#grad1 {
+  height: 200px;
+  background: red;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  /* Standard syntax (must be last) */
+}
+
+/*.playBtn:hover{
+        color: black;
+      }*/
+
+body {
+  background-color: rgb(176, 255, 150);
+}
+
+main,
+footer {
+  background-color: rgb(238, 255, 232);
+}
+
+
+html {
+  accent-color: rgb(176, 255, 150);
+  overflow-x: hidden;
+}
+
+#AboutMe {
+  background-image: url(/backgroundAbout.webp);
+  background-repeat: repeat;
+  background-size: 10%;
+  background-color: rgba(176, 255, 150, 0.881);
+  width: 90%;
+}
+
+.textInAbout {
+  background-color: rgba(176, 255, 150, 0.612);
+  border-radius: 30px;
+  border: 2px solid rgba(137, 72, 71, 0.208);
+}
+
+main {
+  border-radius: 6px 6px 0px 0px;
+}
+
+footer {
+  border-radius: 0px 0px 12px 12px;
+}
+
+.btn.bggreen {
+  border-color: black;
+}
+
+.btn.bggreen.text-white {
+  border-color: rgba(255, 255, 255, 0.747);
+}
+
+#navbarHeader>.container>.row {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*webkit*/
+#navbarHeader>.container>.row::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb {
+  background-color: rgba(153, 220, 131, 0.74);
+  box-shadow: inset 0 0 6px rgba(176, 255, 150, 0.3);
+  padding: 90px;
+  border-radius: 25px;
+}
+
+/* width */
+
+/* Track */
+#navbarHeader>.container>.row::-webkit-scrollbar-track {
+  background: green;
+  /*border-color: rgb(0, 77, 0);*/
+  border-color: black;
+  border-spacing: 25px;
+}
+
+/* Handle on hover */
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 255, 150, 0.74);
+}
+
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb:active {
+  background-color: rgba(153, 220, 131, 0.74);
+}
+
+/* about section font */
+#AboutMe {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#AboutMe {
+  font-weight: bold;
+}
+
+
+
+#navbarHeader {
+  border-radius: 6px 6px;
+}
+
+header>nav {
+  border-radius: 4px;
+}
+
+.navbargreen {
+  background-color: rgba(0, 128, 0, 0.97);
+}
+
+head {
+  background-color: rgb(0, 128, 0);
+}
+
+/* 128.25 */
+img.card-img-top {
+  height: 10%;
+}
+
+ul .User {
+  list-style-type: none;
+}
+
+header {
+  color: white;
+}
+
+.bggreen {
+  background-color: green;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  /*-webkit-overflow-scrolling: touch;*/
+}
+
+.User li {
+  list-style-type: none;
+}
+
+/*ul .user {
+          list-style-type: none;
+        }
+        
+        ul .user li ::marker{
+          display: none; 
+        }*/
+
+#grad1 {
+  height: 200px;
+  background: red;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  /* Standard syntax (must be last) */
+}
+
+/*.playBtn:hover{
+        color: black;
+      }*/
+
+body {
+  background-color: rgb(176, 255, 150);
+}
+
+main,
+footer {
+  background-color: rgb(238, 255, 232);
+}
+
+
+html {
+  accent-color: rgb(176, 255, 150);
+  overflow-x: hidden;
+}
+
+#AboutMe {
+  background-image: url(/backgroundAbout.webp);
+  background-repeat: repeat;
+  background-size: 10%;
+  background-color: rgba(176, 255, 150, 0.881);
+  width: 90%;
+}
+
+.textInAbout {
+  background-color: rgba(176, 255, 150, 0.612);
+  border-radius: 30px;
+  border: 2px solid rgba(137, 72, 71, 0.208);
+}
+
+main {
+  border-radius: 6px 6px 0px 0px;
+}
+
+footer {
+  border-radius: 0px 0px 12px 12px;
+}
+
+.btn.bggreen {
+  border-color: black;
+}
+
+.btn.bggreen.text-white {
+  border-color: rgba(255, 255, 255, 0.747);
+}
+
+#navbarHeader>.container>.row {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*webkit*/
+#navbarHeader>.container>.row::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb {
+  background-color: rgba(153, 220, 131, 0.74);
+  box-shadow: inset 0 0 6px rgba(176, 255, 150, 0.3);
+  padding: 90px;
+  border-radius: 25px;
+}
+
+/* width */
+
+/* Track */
+#navbarHeader>.container>.row::-webkit-scrollbar-track {
+  background: green;
+  /*border-color: rgb(0, 77, 0);*/
+  border-color: black;
+  border-spacing: 25px;
+}
+
+/* Handle on hover */
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 255, 150, 0.74);
+}
+
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb:active {
+  background-color: rgba(153, 220, 131, 0.74);
+}
+
+/* about section font */
+#AboutMe {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#AboutMe {
+  font-weight: bold;
+}
+
+
+
+#navbarHeader {
+  border-radius: 6px 6px;
+}
+
+header>nav {
+  border-radius: 4px;
+}
+
+.navbargreen {
+  background-color: rgba(0, 128, 0, 0.97);
+}
+
+head {
+  background-color: rgb(0, 128, 0);
+}
+
+/* 128.25 */
+img.card-img-top {
+  height: 10%;
+}
+
+ul .User {
+  list-style-type: none;
+}
+
+header {
+  color: white;
+}
+
+.bggreen {
+  background-color: green;
+}
+
+.navbargreen {
+  background-color: green;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  /*-webkit-overflow-scrolling: touch;*/
+}
+
+.User li {
+  list-style-type: none;
+}
+
+/*ul .user {
+          list-style-type: none;
+        }
+        
+        ul .user li ::marker{
+          display: none; 
+        }*/
+
+#grad1 {
+  height: 200px;
+  background: red;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  /* Standard syntax (must be last) */
+}
+
+/*.playBtn:hover{
+        color: black;
+      }*/
+
+body {
+  background-color: rgb(176, 255, 150);
+}
+
+main,
+footer {
+  background-color: rgb(238, 255, 232);
+}
+
+
+html {
+  accent-color: rgb(176, 255, 150);
+  overflow-x: hidden;
+}
+
+#AboutMe {
+  background-image: url(/backgroundAbout.webp);
+  background-repeat: repeat;
+  background-size: 10%;
+  background-color: rgba(176, 255, 150, 0.881);
+  width: 90%;
+}
+
+.textInAbout {
+  background-color: rgba(176, 255, 150, 0.612);
+  border-radius: 30px;
+  border: 2px solid rgba(137, 72, 71, 0.208);
+}
+
+main {
+  border-radius: 6px 6px 0px 0px;
+}
+
+footer {
+  border-radius: 0px 0px 12px 12px;
+}
+
+.btn.bggreen {
+  border-color: black;
+}
+
+.btn.bggreen.text-white {
+  border-color: rgba(255, 255, 255, 0.747);
+}
+
+#navbarHeader>.container>.row {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*webkit*/
+#navbarHeader>.container>.row::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb {
+  background-color: rgba(153, 220, 131, 0.74);
+  box-shadow: inset 0 0 6px rgba(176, 255, 150, 0.3);
+  padding: 90px;
+  border-radius: 25px;
+}
+
+/* width */
+
+/* Track */
+#navbarHeader>.container>.row::-webkit-scrollbar-track {
+  background: green;
+  /*border-color: rgb(0, 77, 0);*/
+  border-color: black;
+  border-spacing: 25px;
+}
+
+/* Handle on hover */
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 255, 150, 0.74);
+}
+
+#navbarHeader>.container>.row::-webkit-scrollbar-thumb:active {
+  background-color: rgba(153, 220, 131, 0.74);
+}
+
+/* about section font */
+#AboutMe {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#AboutMe {
+  font-weight: bold;
+}
+
+
+
+#navbarHeader {
+  border-radius: 6px 6px;
+}
+
+header>nav {
+  border-radius: 4px;
+}
+
+.navbargreen {
+  background-color: rgba(0, 128, 0, 0.97);
+}
+
+head {
+  background-color: rgb(0, 128, 0);
+}
+
+/* 128.25 */
+img.card-img-top {
+  height: 10%;
+}
