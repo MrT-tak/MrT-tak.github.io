@@ -3,6 +3,7 @@
         <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
         <link rel="stylesheet" href="https://MrT-tak.github.io/blogElement/template/GT.css">
         <script defer>
+            console.log(location.parent.href)
             // const gitalk = require('gitalk')
             //     require('gitalk/dist/gitalk.css')
 
@@ -15,7 +16,7 @@
                         repo: 'mrt-tak.github.io',
                         owner: 'mrt-tak',
                         admin: ['mrt-tak'],
-                        id: `comment-${location.pathname}`,
+                        id: `comment-${location.parent.href}`,
                         proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
                     });
                 myGitalk.render('gitalk-container');
