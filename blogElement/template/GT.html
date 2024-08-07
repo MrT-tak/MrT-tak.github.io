@@ -16,7 +16,7 @@
                         repo: 'mrt-tak.github.io',
                         owner: 'mrt-tak',
                         admin: ['mrt-tak'],
-                        id: `comment-${window.parent.location.href}`,
+                        id: `comment-${window.parent.location.pathname}`,
                         proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
                     });
                 myGitalk.render('gitalk-container');
