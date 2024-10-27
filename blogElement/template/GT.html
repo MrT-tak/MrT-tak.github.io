@@ -1,32 +1,16 @@
-<div>
-    <div>
-        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-        <link rel="stylesheet" href="https://MrT-tak.github.io/blogElement/template/GT.css">
-        <script defer>
-            console.log(window.parent.location)
-            // const gitalk = require('gitalk')
-            //     require('gitalk/dist/gitalk.css')
-
-            document.addEventListener('DOMContentLoaded', () => {
-                const myGitalk = new Gitalk(
-                    {
-                        clientID: '8c4fbd64f04025afaf07',
-                        clientSecret: "c469ea56c1f8916d383c505c850978d4bd5bba0f",
-                        //clientSecret: `${GH_GITALK}`,
-                        repo: 'mrt-tak.github.io',
-                        owner: 'mrt-tak',
-                        admin: ['mrt-tak'],
-                        id: `comment-${window.parent.location.pathname}`,
-                        proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
-                    });
-                myGitalk.render('gitalk-container');
-            });
-        </script>
-    </div>
-    <!-- comment section -->
-    Let's chat! Any questions please post it here.
-    <!-- GiTalk init -->
-    <div id="gitalk-container">
-        <h1>Please wait for gitalk to load</h1><progress style="accent-color: var(BbB-lime-green);"></progress>
-    </div>
-</div>
+<script src="https://giscus.app/client.js"
+        data-repo="mrt-tak/mrt-tak.github.io"
+        data-repo-id="R_kgDOGpG8dw"
+        data-category="comments"
+        data-category-id="DIC_kwDOGpG8d84Cju5-"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        data-loading="lazy"
+        async>
+</script>
