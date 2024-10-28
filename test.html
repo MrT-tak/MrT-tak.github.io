@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html data-theme="light">
 <!-- Creative Commons BY-NC 4.0 -->
 <html lang="en">
 
@@ -57,7 +57,7 @@
             scroll-behavior: smooth;
         }
     </style>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="/global.css">
 
     <style>
         ul .User {
@@ -150,10 +150,15 @@
         }
 
         footer {
-            position: fixed;
-            bottom: 0;
             width: 100%;
-            background: #6cf;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        main{
+            background-color: !important rgb(156, 255, 224);
         }
     </style>
 </head>
@@ -163,7 +168,7 @@
         <!-- header -->
         <div class="navbar navbar-dark bggreen shadow-sm">
             <nav class="container">
-                <a target="_blank" rel="noopener"" href=" /" class="navbar-brand d-flex align-items-center">
+                <a target="_blank" rel="noopener" href=" /" class="navbar-brand d-flex align-items-center">
                     <img src="https://avatars.githubusercontent.com/u/95097999?v=4" alt="MrT's profile logo"
                         id="MrTsavater" width="50cm">
                     <strong>MrT's Homepage</strong>
@@ -197,14 +202,14 @@
                         <ul class="list-unstyled">
                             <li><!--<a target="_blank" rel="noopener""href="https://github.com/MrT-tak/"-->
                                 <button class="btn bggreen">
-                                    <a target="_blank" rel="noopener"" href=" https://github.com/MrT-tak/"
+                                    <a target="_blank" rel="noopener" href=" https://github.com/MrT-tak/"
                                         class="text-white externalLinkHighlight">GITHUB</a>
                                 </button>
                             </li>
                             <br>
                             <li>
                                 <button class="btn bggreen" id="mailMe">
-                                    <a target="_blank" rel="noopener"" href=" mailto:MrT-tak@outlook.com"
+                                    <a target="_blank" rel="noopener" href=" mailto:MrT-tak@outlook.com"
                                         class="text-white">Email me</a>
                                 </button>
                             </li>
@@ -212,7 +217,7 @@
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">RSS</h4>
-                        <a target="_blank" rel="noopener"" href=" /RSS/index.html">
+                        <a target="_blank" rel="noopener" href=" /RSS/index.html">
                             <button class="btn btn-primary bggreen">
                                 <img height="9cm" src="https://cdn-icons-png.flaticon.com/512/2504/2504935.png"
                                     alt="RSS icon(orange circle with wifi mark tilted 45 degrees)">
@@ -223,19 +228,19 @@
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">scroll to...</h4>
                         <ul class="list-unstyled">
-                            <li><button class="btn bggreen"><a target="_blank" rel="noopener"" href=" #"
+                            <li><button class="btn bggreen"><a target="_blank" rel="noopener" href=" #"
                                         class="text-white">top</a></button></li>
-                            <li><button class="btn bggreen"><a target="_blank" rel="noopener"" href=" #AboutMe"
+                            <li><button class="btn bggreen"><a target="_blank" rel="noopener" href=" #AboutMe"
                                         class="text-white">Welcome message(About
                                         Me)</a></button></li>
-                            <li><button class="btn bggreen"><a target="_blank" rel="noopener"" href=" #my-fav-games"
+                            <li><button class="btn bggreen"><a target="_blank" rel="noopener" href=" #my-fav-games"
                                         class="text-white">my favorite
                                         games</a></button>
                             </li>
-                            <li><button class="btn bggreen"><a target="_blank" rel="noopener"" href=" #my-friends"
+                            <li><button class="btn bggreen"><a target="_blank" rel="noopener" href=" #my-friends"
                                         class="text-white">my
                                         friends</a></button></li>
-                            <li><button class="btn bggreen"><a target="_blank" rel="noopener"" href=" #my-rblx-games"
+                            <li><button class="btn bggreen"><a target="_blank" rel="noopener" href=" #my-rblx-games"
                                         class="text-white">my games on
                                         roblox</a></button></li>
                         </ul>
@@ -246,15 +251,119 @@
         <span id="page-loading-space"></span>
     </header>
     <main>
-        <a target="_blank" rel="noopener"" target=" _blank" href="index.html" rel="noopener"" class=" btn
+        <a target="_blank" rel="noopener" target=" _blank" href="index.html" rel="noopener" class=" btn
             bggreen">HI</a>
         <h1>Test page!</h1>
         <p>
             This is a test page for making developing these pages easier.
-            Click <a target="_blank" rel="noopener"" href=" ./"><button
-                    class="btn btn-primary bggreen">here</button></a>
+            Click <a target="_blank" rel="noopener" href=" ./"><button class="btn btn-primary bggreen">here</button></a>
             to return to front page.
         </p>
+        <div id="font-test">
+            <p>
+            <h1>Heading number 1!</h1>
+            <h2>Heading number 2!</h2>
+            <h3>Heading number 3!</h3>
+            <h4>Heading number 4!</h4>
+            <h5>Heading number 5!</h5>
+            <h6>Heading number 6!</h6>
+            </p>
+            <input type="number" name="Font size" id="fontInputPx" value="24"> px
+            <input type="number" name="Font size" id="fontInputPerc" value=""> %
+            <p id="textExperimentWrapper">
+
+                Aa <br /><br />
+
+                <span>ABCEFGHIJKLNMOPQRSTUVWXYZ</span>
+                <span>abcdefghijklmnopqrsvutwxyz</span><br />
+
+                <b>ABCEFGHIJKLNMOPQRSTUVWXYZ
+                    abcdefghijklmnopqrsvutwxyz</b><br />
+
+                <span class="italic">ABCEFGHIJKLNMOPQRSTUVWXYZ
+                    abcdefghijklmnopqrsvutwxyz</span><br />
+
+
+
+                ABCEFGHIJKLNMOPQRSTUVWXYZ
+                abcdefghijklmnopqrsvutwxyz<br />
+            </p>
+
+            <script defer>
+                let textExperimentWrapper = document.getElementById("textExperimentWrapper")
+
+                let style = window.getComputedStyle(textExperimentWrapper);
+                let defaultFontSizeStr = style.getPropertyValue('font-size');
+                console.log(defaultFontSizeStr);
+
+                const fontSize = parseInt(defaultFontSizeStr.replace('px', ''));
+
+                const pxInput = document.getElementById("fontInputPx");
+                const percInput = document.getElementById("fontInputPerc");
+
+                pxInput.value = fontSize;
+
+                pxInput.addEventListener('input', (e) => {
+                    let fontSize = parseInt(e.target.value);
+                    //console.log(fontSize);
+                    textExperimentWrapper.style.fontSize = `${fontSize}px`;
+                });
+
+                percInput.addEventListener('input', (e) => {
+                    let fontSize = parseInt(e.target.value);
+                    //console.log(fontSize);
+                    textExperimentWrapper.style.fontSize = `${fontSize}%`;
+                });
+            </script>
+        </div>
+        <h1 style="margin-top: 5%;">Colour bars</h1>
+        <div style="" id="themeDemoWrap">
+            <div>Body-bg</div>
+            <div>Header-header-bg</div>
+            <div>Header-header-text</div>
+            <div>Header-dropdown-bg</div>
+            <div>Header-dropdown-text</div>
+            <div>Main-text</div>
+            <div>Main-bg</div>
+            <div>Subtle-anchor-text</div>
+            <div>Anchor-text</div>
+        </div>
+        <style>
+            #themeDemoWrap>*, #themeDemoWrapAbstract>* {
+                width: 100%;
+                height: 5%;
+            }
+        </style>
+        <script>
+            const parentDiv = document.getElementById('themeDemoWrap'); // Replace with your div's ID
+            const children = parentDiv.children;
+
+            for (let i = 0; i < children.length; i++) {
+                const child = children[i];
+                const textContent = child.textContent;
+
+                console.log(textContent)
+
+                const color = `var(--${textContent})`;
+
+                child.style.backgroundColor = color;
+            }
+        </script>
+
+        <h1 style="margin-top: 5%;">Abstract webpage</h1>
+        <div id="themeDemoWrapAbstract" >
+            <div style="background-color: var(--Header-header-bg); color: var(--Header-header-text);">Header-header</div>
+            <div style="background-color: var(--Header-dropdown-bg); color: var(--Header-dropdown-text);">Header-dropdown
+                <ul>
+                    <li>abc</li>
+                </ul>
+            </div>
+            <div style="background-color: var(--Main-bg); color: var(--Main-text);">
+                Main, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, facere? Nemo earum id perspiciatis reprehenderit, eius beatae, ipsam iure itaque voluptas facere aliquam harum fugiat deleniti, aut sunt reiciendis quo.
+            </div>
+            <div style="color: var(--Subtle-anchor-text);">Subtle-anchor-text</div>
+            <div style="color: var(--Anchor-text);">Anchor-text</div>
+        </div>
     </main>
 
     <footer class="text-muted py-5" style="background-color: rgb(203, 203, 203); color: azure;">
@@ -267,15 +376,15 @@
             <h1>MrT730 Programer's edited version of album example</h1>
             <p><b>MrT730</b></p>
             <p>
-                <a target="_blank" rel="noopener"" rel=" license"
+                <a target="_blank" rel="noopener" rel=" license"
                     href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License"
                         style="border-width:0"
                         src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is
-                licensed under a <a target="_blank" rel="noopener"" rel=" license"
+                licensed under a <a target="_blank" rel="noopener" rel=" license"
                     href="http://creativecommons.org/licenses/by-nc/4.0/">&copy; Creative
                     Commons
                     Attribution-NonCommercial 4.0 International License</a>.
-                <a target="_blank" rel="noopener"" href=" /LICENSE.html" rel="license">CLICK HERE FOR
+                <a target="_blank" rel="noopener" href=" /LICENSE.html" rel="license">CLICK HERE FOR
                     LICENSE.html(decoded
                     from MD</a>
             </p>
