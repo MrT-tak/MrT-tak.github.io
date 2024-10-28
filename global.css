@@ -1,10 +1,35 @@
 html {
   accent-color: rgb(176, 255, 150);
   scroll-behavior: smooth;
+  --BbB-lime-green: #B0FF96;
+  --BbB-brown: #906969;
+  --green: green
+}
+html{
+  --BLG: var(--BbB-lime-green);
+  --BB: var(--BbB-brown);
+}
+
+:root, html[data-theme="light"] {
+  --Body-bg: var(--BbB-lime-green);
+  --Header-header-bg: var(--green);
+  --Header-header-text: white;
+  --Header-dropdown-bg: var(--BbB-brown);
+  --Header-dropdown-text: White;
+  --Main-text: var(--black);
+  --Main-bg: white;
+  --Subtle-anchor-text: white;
+  --Anchor-text: var(--bs-link-color);
+
+
+}
+
+a {
+  color: var(--Anchor-text);
 }
 
 main {
-  background-color: white !important;
+  background-color: white;
   border-radius: 10px;
 }
 
@@ -14,7 +39,7 @@ main {
 }
 
 .navbargreen {
-  background-color: rgba(0, 128, 0, 0.97);
+  background-color: var(--Header-header-bg);
 }
 
 .text-stroke-lime {
