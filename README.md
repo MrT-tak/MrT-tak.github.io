@@ -10,4 +10,4 @@ My blog/homepage
 
 hi there!
 
-credits: [!click here](/credits.md)
+credits: [click here](/credits.md)
