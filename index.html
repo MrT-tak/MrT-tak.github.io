@@ -1,890 +1,510 @@
-<!DOCTYPE html>
-<!-- Creative Commons BY-NC 4.0 -->
-<html lang="en" data-theme="light">
+<!doctype html>
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7faef">
+  <title>MrT</title>
+  <script>
+    // What is the hostname of the current page?
+    const hostname = window.location.hostname;
+    const default_hostname = "mrt-tak.github.io";
+    const acceptable_hostnames = [""]
 
-  <!-- favicon stuff -->
-  <link rel="
-  icon" href="/favicon.ico">
-  <link rel="icon" sizes="192x192" href="/favicon.ico">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon">
+    if ((hostname !== default_hostname) && (!acceptable_hostnames.includes(hostname))) {
+      const hostname_presented = default_hostname
+    } else {
+      const hostname_presented = hostname
+    }
 
-
-  <!--    METAs    -->
-  <div>
-    <!-- bing search tool -->
-    <meta name="msvalidate.01" content="3BE9CFA6584B778561D3B688CF00AF35">
-    <!--others-->
-    <meta name="description" content="MrT's Website">
-    <meta name=" author" content="MrT">
-    <link rel="license" href="/LICENSE.html">
-    <!--    METAs   Open Graph    -->
-    <div>
-      <meta property="og:title" content="MrT's Homepage">
-      <meta property="og:description" content="MrT(who likes coding)'s home page">
-      <meta property="og:image" content="https://MrT-tak.github.io/backgrand.jpg">
-      <meta property="og:url" content="https://mrt-tak.github.io">
-      <meta property="og:site_name" content="MrT's Homepage">
-      <meta property="og:type" content="profile">
-      <meta property="og:profile:username" content="MrT">
-      <meta property="og:profile:gender" content="male">
-      <meta property="og:image:alt" content="banner">
-    </div>
-    <!--    METAs   Twitter    -->
-    <div>
-      <meta name="twitter:card" content="">
-      <meta name="twitter:site" content="MrT-tak.github.io">
-      <meta name="twitter:creator" content="MrT">
-      <meta name="twitter:title" content="MrT's Homepage">
-      <meta name="twitter:description" content="MrT(who likes coding)'s home page">
-      <meta name="twitter:image" content="https://MrT-tak.github.io/backgrand.jpg">
-    </div>
-    <!--    METAs   Google    -->
-    <div>
-      <meta itemprop="name" content="MrT's Homepage">
-      <meta itemprop="description" content="MrT(who likes coding)'s home page">
-      <meta itemprop="image" content="https://MrT-tak.github.io/backgrand.jpg">
-      <!-- meta name="generator" content="Hugo 0.98.0"> in the album template. this is almost all hand crafted -->
-    </div>
-    <title>MrT730 HP</title>
-
-  </div>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-
-  <!-- slide bar css -->
-  <link rel="stylesheet" href="/slideBarStyle.css">
-  <!-- global css -->
-  <link rel="stylesheet" href="/global.css">
-  <script src="/global.js" modular=""></script>
-
-  <!-- unloader -->
-  <link rel="stylesheet" href="/unloader.css">
-  <script src="/unloader.js"></script>
-
-
-  <script src="/scroll-sys.js" defer=""></script>
-  <script src="/colorVariable.js"></script>
-
-  <link rel="stylesheet" href="/externallinkmark.css">
-
-  <link rel="stylesheet" href="/navLinkCopyStyle.css" defer="">
-  <script defer="" src="/navLinkCopyScript.js"></script>
-  <link rel="stylesheet" href="./font.css" media="all" onload="if(media!=='all')media='all'"><!-- font -->
-
+    for (const elem of document.querySelectorAll(".identify-hostname")) {
+      elem.textContent = hostname_presented;
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/@fluentui/web-components@3.1.4/dist/web-components-all.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://mrt-tak.github.io/externallinkmark.css"> -->
   <style>
-    main {
-      padding-top: 1px;
+    :root {
+      --external-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='green' width='1em' title='external-link-alt'%3E%3Cpath d='M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z' /%3E%3C/svg%3E");
+      --pdf-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='.75em' fill='green' title='file-pdf'%3E%3Cpath d='M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z' /%3E%3C/svg%3E");
+    }
+
+    a[href^="https"][target="_blank"]>*:first-child:after,
+    a[href^="http"][target="_blank"]>*:first-child:after,
+    a[target="_blank"] {
+      content: " " var(--external-icon);
+    }
+
+    a[href$=".pdf" i]>*:first-child:after {
+      content: " " var(--pdf-icon);
+    }
+
+    a[href^="mailto"]>*:first-child:after {
+      content: " " url(https://img.icons8.com/windows/14/null/new-post.png);
+    }
+
+    a[href^="https://github.com/"]>*:first-child:after {
+      content: " " url(/img/custom-resized-github-mark.svg);
+    }
+
+    a[href^="https://youtube.com/"]:not(.NoYTLinkIcon)>*:first-child:after,
+    a[href^="http://www.youtube.com/"]:not(.NoYTLinkIcon):first-child:after {
+      content: " " url(https://img.icons8.com/color/16/null/youtube-play.png);
+    }
+
+    a[href^="https://github.com/"]>*:first-child:after {
+      content: " " url(/img/custom-resized-github-mark.svg);
+    }
+
+    a[href^="https://wikipedia.com/"]>*:first-child:after {
+      content: " " url(/img/custom-resized-github-mark.svg);
+    }
+
+    /* 
+  * orignal css file from kevin powell *
+*/
+  </style>
+  <style>
+    :root {
+      color-scheme: light;
+      --fontFamilyBase: "Segoe UI Variable", "Segoe UI", sans-serif;
+      --fontSizeBase300: 14px;
+      --fontSizeBase200: 12px;
+      --fontSizeBase400: 16px;
+      --strokeWidthThin: 1px;
+      --borderRadiusMedium: 6px;
+      --borderRadiusLarge: 12px;
+
+      --colorBrandBackground: #008000;
+      --colorBrandBackgroundHover: #006400;
+      --colorBrandBackground2: #e8f3d9;
+      --colorNeutralBackground1: #ffffff;
+      --colorNeutralBackground2: #f7faef;
+      --colorNeutralForeground1: #1f2c1c;
+      --colorNeutralForeground2: #4f614c;
+      --colorNeutralStroke1: #d6e5bb;
+      --colorNeutralForegroundOnBrand: #ffffff;
+
+      --page: #f7faef;
+      --surface: var(--colorNeutralBackground1);
+      --surface-subtle: var(--colorNeutralBackground2);
+      --text: var(--colorNeutralForeground1);
+      --muted: var(--colorNeutralForeground2);
+      --border: var(--colorNeutralStroke1);
+      --accent: var(--colorBrandBackground);
+      --accent-soft: var(--colorBrandBackground2);
+      --on-accent: var(--colorNeutralForegroundOnBrand);
+      --shadow: 0 4px 12px rgb(0 0 0 / 6%);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      color: var(--text);
+      background: var(--page);
+      font-family: var(--fontFamilyBase);
+      font-size: var(--fontSizeBase300);
+      line-height: 1.6;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .Identity-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .profile-card {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--borderRadiusLarge);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .avatar-lg {
+      display: inline-flex;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--on-accent);
+      font-size: 24px;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .profile-details h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .flags-badge {
+      font-size: 1rem;
+      margin-left: 8px;
+    }
+
+    .handle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    .bio-text {
+      margin-top: 14px;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 650;
+      margin: 32px 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .info-card {
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--borderRadiusMedium);
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .link-item:last-child {
+      border-bottom: none;
+    }
+
+    .link-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .link-item a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --colorBrandBackground: #b0ff96;
+      --colorBrandBackgroundHover: #c5e384;
+      --colorBrandBackground2: #284226;
+      --colorNeutralBackground1: #202a1f;
+      --colorNeutralBackground2: #293728;
+      --colorNeutralForeground1: #f3f7ef;
+      --colorNeutralForeground2: #b8c5b0;
+      --colorNeutralStroke1: #394835;
+      --colorNeutralForegroundOnBrand: #172017;
+
+      --page: #172017;
+      --surface: var(--colorNeutralBackground1);
+      --surface-subtle: var(--colorNeutralBackground2);
+      --text: var(--colorNeutralForeground1);
+      --muted: var(--colorNeutralForeground2);
+      --border: var(--colorNeutralStroke1);
+      --accent: var(--colorBrandBackground);
+      --accent-soft: var(--colorBrandBackground2);
+      --on-accent: var(--colorNeutralForegroundOnBrand);
+      --shadow: 0 4px 12px rgb(0 0 0 / 30%);
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-header {
+        flex-direction: column;
+      }
     }
   </style>
-
-  <script src="https://keepandroidopen.org/banner.js"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1056.0" data-gr-ext-installed="" data-gr-ext-disabled="forever">
-  <header class="sticky-top">
-    <!-- header -->
-    <nav class="navbar navbar-dark navbargreen shadow-sm">
-      <nav class="container">
-        <a href="/" class="navbar-brand d-flex align-items-center">
-          <img crossorigin="anonymous" referrerpolicy="no-referrer"
-            src="https://avatars.githubusercontent.com/u/95097999?v=4" alt="MrT's profile logo" id="MrTsavater"
-            width="50cm" loading="eager" fetchpriority="high">
-          <strong>MrT's Homepage</strong>
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
-          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-    </nav>
+<body>
+  <div class="container">
+    <header class="header-bar">
+      <div class="Identity-title">
+        <span class="identify-hostname">mrt-tak.github.io</span>
+      </div>
+      <fluent-button id="theme-toggle" appearance="subtle" aria-label="Toggle Theme" title="Toggle Theme">
+        <span aria-hidden="true">◐</span>
+      </fluent-button>
+    </header>
 
-    <!--header menu-->
-    <div class="collapse head-menu" id="navbarHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4">
-            <h4 class="text-white">About</h4>
-            <p class="text-white">Hi I am MrT formally known as MrT730. I like to code and play games.
-
-              I was born in fukuoka prefecture in Japan. my mother is from fukuoka but my father is from nagoya
-              prefecture.
-              <br>
-              <img crossorigin="anonymous" referrerpolicy="no-referrer" alt="GitHub commit(aka update) on main activity"
-                src="https://img.shields.io/github/commit-activity/m/MrT-tak/MrT-tak.github.io?color=brightgreen&amp;label=updated"
-                loading="lazy" fetchpriority="low">
+    <main>
+      <!-- Hero Profile -->
+      <section class="profile-card">
+        <div class="profile-header">
+          <!-- <div class="avatar-lg" aria-label="MrT Avatar">MrT</div> -->
+          <img src="https://avatars.githubusercontent.com/u/95097999?v=4" alt="MrT's profile logo" class="avatar-lg"
+            width="64" height="64" loading="eager" fetchpriority="high">
+          <div class="profile-details">
+            <h1>MrT <span class="flags-badge">🇯🇵 | 🇬🇧🇸🇰🇪🇺</span></h1>
+            <div class="handle">Formally known as <strong>MrT730</strong></div>
+            <p class="bio-text">
+              <span style="font-family: 'Segoe UI Emoji';">🇯🇵 | 🇬🇧🇸🇰🇪🇺</span> Hello mate! Ako sa máš?<br />
+              Foreigner growing up in a changing Europe!<br />
+              海外駐在員 Expat<br />
+              <br />
+              Py, HTML, JS, CSS.<br />
+              Opinions & photos my own unless otherwise (check Alt Text).<br />
+              Profile splash "MrT" CC BY-SA 4.0 Intl.
             </p>
           </div>
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Contact</h4>
-            <ul class="list-unstyled">
-              <li><!--<a href="https://github.com/MrT-tak/"-->
-                <button class="btn bggreen text-white">
-                  <a href="https://github.com/MrT-tak/" class="text-white externalLinkHighlight">GITHUB</a>
-                </button>
-              </li>
-              <br>
-              <li>
-                <button class="btn bggreen text-white" id="mailMe">
-                  <a href="mailto:MrT-tak@outlook.com" class="text-white">Email me</a>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">RSS</h4>
-            <a href="/RSS/index.html">
-              <button class="btn btn-primary bggreen text-white">
-                <img crossorigin="anonymous" referrerpolicy="no-referrer" height="9cm"
-                  src="https://cdn-icons-png.flaticon.com/512/2504/2504935.png"
-                  alt="RSS icon(orange circle with wifi mark tilted 45 degrees)" loading="lazy" fetchpriority="low">
-                RSS
-              </button>
-            </a>
-          </div>
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">scroll to...</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-white">
-                  <button class="btn bggreen text-white">
-                    top
-                  </button>
-                </a>
-              </li>
+        </div>
+      </section>
 
-              <li>
-                <a href="#AboutMe" class="text-white">
-                  <button class="btn bggreen text-white">
-                    Welcome message(About
-                    Me)
-                  </button>
-                </a>
-              </li>
 
-              <li>
-                <a href="#my-fav-games" class="text-white">
-                  <button class="btn bggreen text-white">
-                    my favorite
-                    games
-                  </button>
-                </a>
-              </li>
+      <!-- Tech Stack -->
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="info-card">
+        <div class="badge-group">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Wikitext</span>
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">CSS3</span>
+        </div>
+        <p>
+          I've been mainly focusing my attention on Python, despite starting in basic web-based tech, as I've been
+          contributing to Washiez&nbsp;Wiki:&nbsp;Bot&nbsp;Developers, part of Washiez&nbsp;Wiki, a Fandom Games wiki
+          dedicated to the Washiez, a a Roblox job-roleplay game, owned by Deviizer/Buildiez studios. My work has been
+          being the Administerator of the wiki, using my knowledge of HTML into wikitext and helping with a Discord bot
+          that constantly pulls data from Roblox Group API, and compares with local copy to detect changes in rank
+          structure.
+        </p>
+      </div>
 
-              <li>
-                <a href="#my-friends" class="text-white">
-                  <button class="btn bggreen text-white">
-                    my friends
-                  </button>
-                </a>
-              </li>
-
-              <li>
-                <a href="#my-rblx-games" class="text-white">
-                  <button class="btn bggreen text-white">
-                    my games on
-                    roblox
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </div>
+      <!-- Origins & Background -->
+      <h2 class="section-title" style="/*lowercase*/ text-transform: lowercase;">whoami?</h2>
+      <div class="grid-2">
+        <div class="info-card">
+          <h3>As a Japanese...</h3>
+          <p>Born in Fukuoka prefecture (福岡県). Mother from Fukuoka, father from Aichi/Nagoya (愛知県 名古屋市).</p>
+          <!-- Fluent UI 3 card image https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:nad5fo6tlufemdixaezffq6m/bafkreihcydtjdiyknfu4jkeouovbmbakxpzeblfc4bgq6enmktlysxceaa -->
+          <img
+            src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:nad5fo6tlufemdixaezffq6m/bafkreihcydtjdiyknfu4jkeouovbmbakxpzeblfc4bgq6enmktlysxceaa"
+            alt="Fukuoka viewed from a airplane, engine on the left."
+            style="width: 100%; border-radius: var(--borderRadiusMedium); margin-top: 12px;">
+        </div>
+        <div class="info-card">
+          <h3>As a foreigner...</h3>
+          <p>I've been living in Europe for a long time, from Primary to Secondary (Seniors). I know English good enough
+            to communicate effectively, attempted to learn Slovak and French, which didn't go as well.</p>
+          <img
+            src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:nad5fo6tlufemdixaezffq6m/bafkreiglm4jpekvadj7324hbasuzfwlhcbiwrl5djorqapoqdpgajt5bmm"
+            alt="Ozzy the (Mechanical) Bull in Birmingham New Street Station, England, UK, the world. A bull statue in the station, wearing a classy coloured glasses."
+            style="width: 100%; border-radius: var(--borderRadiusMedium); margin-top: 12px; display: flex; align-items: flex-end;">
         </div>
       </div>
-      <span id="page-loading-space"></span>
-    </div>
-  </header>
 
-  <main>
-    <section class="py-5 text-center container rainbow" id="AboutMe" style=" background-color: var(--BbB-lime-green);width: 100%;padding: 10px;
-          border: 2px solid rgb(137, 72, 71);
-          border-radius: 15px;
-          -moz-border-radius: 15px;
-          color: rgb(99, 36, 36);
-          ">
-      <div class="row py-lg-5" style="opacity: 1;">
-        <div class="col-lg-6 col-md-8 mx-auto textInAbout">
-          <h1 class="fw-light Font-UD">
-            <!-- style="font-family: 'UDDigital', 'minecraftia', sans-serif; font-weight: bold;" -->
-            MrT730
-            Website
-          </h1>
-          <p class="lead text-muted">
-          </p>
-          <h1>Welcome to my <span class="font-comic_sans">Website</span>!</h1>
-          <p></p>
-          <p>
-          </p>
-          <p style="font-size: 1.75rem;" class="Font-UD">Hi I am MrT formally known as MrT730. I like to code and
-            play games.</p>
-          <!--<a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
-          <p></p>
+      <!-- Presence & Links -->
+      <section aria-labelledby="links-heading">
+        <h2 class="section-title" id="links-heading">Links</h2>
+        <div class="info-card">
+          <ul class="link-list">
+            <li class="link-item">
+              <a href="mailto:MrT-tak@outlook.com">MrT-tak@outlook.com</a>
+              <div><span class="handle">Email</span></div>
+            </li>
+            <li class="link-item">
+              <a href="https://mrt-tak.github.io" target="_blank" rel="noopener">mrt-tak.github.io</a>
+              <div><span class="handle">Website</span></div>
+            </li>
+            <li class="link-item">
+              <a href="https://orcid.org/0009-0005-7450-170X" target="_blank" rel="noopener">ORCID Profile</a>
+              <div><span class="handle">0009-0005-7450-170X</span></div>
+            </li>
+            <li class="link-item" style="/*desaturate the colour*/ filter: grayscale(70%);">
+              <a href="https://x.com/MrT_tak" target="_blank" rel="noopener">@MrT_tak</a>
+              <div><span class="handle">X (Twitter; inactive)</span></div>
+            </li>
+            <li class="link-item">
+              <a href="https://bsky.app/profile/mrt730.bsky.social" target="_blank"
+                rel="noopener">@mrt730.bsky.social</a>
+              <div><span class="handle">Bluesky</span> <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Bluesky logo" style="width: 1em; height: 1em; vertical-align: middle;"></div>
+            </li>
+            <li class="link-item" style="/*desaturate the colour*/ filter: grayscale(70%);">
+              <a href="https://mastodon.social/@MrT730" target="_blank" rel="noopener">@MrT730@mastodon.social</a>
+              <div><span class="handle">Mastodon (inactive)</span></div>
+            </li>
+            <li class="link-item">
+              <a href="https://washiez.fandom.com/wiki/User:MrT730" target="_blank" rel="noopener">Washiez Wiki</a>
+              <div><span class="handle">Fandom</span> <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Fandom_heart-logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Fandom logo" style="width: 1em; height: 1em; vertical-align: middle;"></div>
+            </li>
+            <li class="link-item">
+              <a href="https://www.roblox.com/users/profile?username=tak_MrT" target="_blank" rel="noopener">tak_MrT</a>
+              <div><span class="handle">Roblox</span></div>
+            </li>
+          </ul>
         </div>
-      </div>
-      <img crossorigin="anonymous" referrerpolicy="no-referrer"
-        src="https://avatars.githubusercontent.com/u/95097999?v=4" style="width: 20%;" loading="lazy"
-        alt="avatar of MrT">
-      <div class="d-flex align-items-center justify-content-center textInAbout">
-        <a href="https://youtube.com/@MrT_tak"><button class="btn bggreen text-white">Youtube</button></a>
-        <a href="https://github.com/MrT-tak/"><button class="btn bggreen text-white">Github</button></a>
-        <a href="mailto:MrT-tak@outlook.com"><button class="btn bggreen text-white">Mail</button></a>
-      </div>
-    </section>
-    <a href="javascript:void(0)" onclick="copyNavLink('AboutMe')" class="navLinkCopy text-center"
-      style="height: 10%; width: 10%;">#</a>
+      </section>
 
-    <div class="alert alert-success Font-Spring" role="alert" style="width: 40%;text-align:center;margin: 0 auto;">
-      Check out <img crossorigin="anonymous" referrerpolicy="no-referrer" alt="A.P.T (Anti Pollution Team)"
-        src="/APT.jpg" style="width: 35%;" loading="lazy"> to <span style="font-size: minmax(0.5cm, 3cm);"
-        class="Font-Spring">
-        about pollution</span> and <span style="font-size: 1cm;" class="Font-Spring">raise awareness about
-        nature!</span>
-      <br>
-      <button type="button" class="btn btn-sm btn-outline-secondary">
-        <a href="https://www.youtube.com/@antipollutionteamofficial2142" class="NoYTLinkIcon">
-          <img referrerpolicy="no-referrer" src="https://www.youtube.com/img/favicon_144.png" width="50cm" alt="youtube"
-            loading="lazy">
-          YOUTUBE
-        </a>
-      </button>
-      <button type="button" class="btn btn-sm btn-outline-secondary">
-        <a href="https://antipollutionteam.wixsite.com/ap-team" style="text-decoration: none;">
-          <img crossorigin="anonymous" referrerpolicy="no-referrer"
-            src="https://static.wixstatic.com/media/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png/v1/fill/w_1110,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/1c0726_b4cc97618fcd41ceaf2a73d55b5906b1~mv2.png"
-            width="50cm" alt="website" loading="lazy">
-          Website
-        </a>
-      </button>
-    </div>
-
-    <div class="album py-5 bg-light">
-      <div class="container">
-        <a>
-          <iframe src="https://mrt-tak.github.io/blog/posts.html"
-            style="height: 100%;width: 100%; overflow: visible;"></iframe>
-          <a href="/blog/">Visit my blog page! (https://mrt-tak.github.io/blog/) </a>
-        </div>
-
-        <!--My fav GAME LIST-->
-
-        <div id="my-fav-games" class="game list">
-          <h1>My Favorite games<a onclick="copyNavLink('my-fav-games')" class="navLinkCopy"
-              href="javascript:void(0)">#</a>
-          </h1>
-          <div>
-            <h2 id="my-fav-game-PC-game">PC game<a onclick="copyNavLink('my-fav-game-PC-game')" class="navLinkCopy"
-                href="javascript:void(0)">#</a></h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm" id="minecraft">
-                  <div class="card-img-top" style="position: relative; text-align: center;">
-                    <!--<img crossorigin="anonymous" referrerpolicy="no-referrer"  src="https://www.minecraft.net/content/dam/minecraft/home/home-hero-1200x600.jpg"
-                      class="card-img-top"
-                      alt="Minecraft background, Steve, Alex and a wolf(like a dog) watching a horizon with a village from a cliff with tree. A official artwork"
-                      loading="lazy" style="width: 100%; height: 100%;">-->
-                    <img crossorigin="anonymous" referrerpolicy="no-referrer" src="/img/MC-sakura.png"
-                      class="card-img-top"
-                      alt="Minecraft background, with mincraft sakura tree with beehive, house and a pig" loading="lazy"
-                      style="width: 100%; height: 100%;">
-                    <img referrerpolicy="no-referrer"
-                      src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg"
-                      alt="Minecraft logo"
-                      style="max-width: 60%; top: 10%;left: 10%; z-index: 100; position: absolute;">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                      <b><img referrerpolicy="no-referrer"
-                          src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg"
-                          alt="Minecraft logo" style="max-width: 20%;"></b> was my
-                      first game<sup>*1</sup> the I played. I was engage to
-                      play
-                      because most class mate play this game. I really like this game.
-                    </p>
-                    <p class="card-footer">
-                      <img crossorigin="anonymous" referrerpolicy="no-referrer" class="card-img-bottom Font-Minecraftia"
-                        style="height: 1cm; width: 1cm;" alt="MrT's minecraft skin"
-                        src="https://api.mineatar.io/head/25842019b74e44d59b2accf406afc347?scale=16">
-                      MrT730
-                    </p>
-                    <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                      src="https://api.mineatar.io/body/full/25842019-b74e-44d5-9b2a-ccf406afc347" style="height: 1%;"
-                      alt="MrT730's minecraft skin">
-                    <p class="card-footer" style="font-size: 1%; background: none;"><sup>*1</sup> may have played
-                      Mario
-                      cart, Mario tennis, Wii sport and other wii games before this time
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm" id="roblox">
-
-                  <img crossorigin="anonymous" referrerpolicy="no-referrer" src="/roblox-logo.png" class="card-img-top"
-                    alt="roblox" loading="lazy">
-
-                  <div class="card-body">
-                    <!--<not used img src="roblox-logo.png" class="card-img-top" alt="roblox logo">-->
-                    <p class="card-text">
-                      Roblox was my second game the I played. Again I was engaged to play because most class mate
-                      play this game.
-                    </p>
-                  </div>
-                  <div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button class="btn bggreen text-white">
-                          <a href="#my-rblx-games" class="text-white">
-                            my games on roblox
-                          </a>
-                        </button>
-                        <a href="#my-rblx-games" class="text-white">
-                        </a><button class="btn bggreen text-white"><a href="#my-rblx-games" class="text-white"></a><a
-                            href="https://plsdonate.me/@tak_MrT" class="text-white">Donate Robux to me!</a></button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm" id="fortnite">
-                  <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/FortniteLogo.svg/375px-FortniteLogo.svg.png"
-                    class="card-img-top" alt="Fortnite" loading="lazy"
-                    style="background: linear-gradient(45deg, #ff8383, #8099ff); padding: 2%;">
-
-                  <div class="card-body">
-                    <!--<not used img src="roblox-logo.png" class="card-img-top" alt="roblox logo">-->
-                    <p class="card-text">
-                      I'm not good at fortnite lol.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 id="my-fav-game-console-game">
-              console games
-              <a onclick="copyNavLink('my-fav-game-console-game')" class="navLinkCopy" href="javascript:void(0)">#</a>
-            </h2>
-            <div>
-              <img referrerpolicy="no-referrer" src="https://www.nintendo.co.jp/wii/img_cmn/wii_logo.gif"
-                alt="wii logo" />
-              <h3><span style="display:none;">Wii</span></h3>
-              I have played some of the wii games before 2022 and still to this day! Here is some of the games on wii
-              that I like(aka what I have played mostly):
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <template>
-                  <div class="col">
-                    <div class="card shadow-sm" id="">
-
-                      <img crossorigin="anonymous" referrerpolicy="no-referrer" src="-logo.png" class="card-img-top"
-                        alt="roblox" loading="lazy">
-
-                      <div class="card-body">
-                        <p class="card-text">
-
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </template>
-                <div class="col">
-                  <div class="card shadow-sm" id="Wii-Party">
-                    <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                      src="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/wii_24/SI_Wii_WiiParty.jpg"
-                      class="card-img-top" alt="Wii Party" loading="lazy">
-
-                    <div class="card-body">
-                      <p class="card-text">
-                        Wii party something we played with my family.
-                        This game makes me competive lol.
-                      </p>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button class="btn bggreen text-white">
-                          <a href="https://en.wikipedia.org/wiki/Wii_Party" class="text-white" rel="noopener">
-                            wikipedia
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card shadow-sm" id="Wii-Fit-Plus">
-                    <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/WiiFit.svg/375px-WiiFit.svg.png"
-                      class="card-img-top" alt="Wii Fit Plus" loading="lazy">
-
-                    <div class="card-body">
-                      <p class="card-text">
-                        Wii Fit party was one of my favorite wii games and I wish it had came to switch.
-                      </p>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button class="btn bggreen text-white">
-                          <a href="https://www.wikipedia.com/en/Wii_Fit#Wii_Fit_Plus" class="text-white" rel="noopener">
-                            wikipedia
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card shadow-sm" id="GO-Vacation-Wii">
-                    <img src="https://af2gc.bn-ent.net/assets/img/common/sns.png" class="card-img-top" alt="Go vacation"
-                      loading="lazy">
-
-                    <div class="card-body">
-                      <p class="card-text">
-                        Go vacation is the most favorite game in wii and it has been fun,
-                        swimming, diving, racing, skiing with my dog, dog slegh and more!
-                      </p>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button class="btn bggreen text-white">
-                          <a href="https://www.wikipedia.com/en/Wii_Fit#Wii_Fit_Plus" class="text-white" rel="noopener">
-                            wikipedia
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--<div>
-              <img crossorigin="anonymous" referrerpolicy="no-referrer"  src="https://wikipediav2-19431.kxcdn.com/_next/image?url=https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Nintendo_Switch_logo.svg/1500px-Nintendo_Switch_logo.svg.png&w=1200&q=50f" alt="Nintendo Switch logo" />
-              <h3><span style="display:none;">Switch</span></h3>
-              Here is some of the games on switch
-              that I like(aka what I have played mostly):
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <template>
-                  <div class="col">
-                    <div class="card shadow-sm" id="">
-            
-                      <img crossorigin="anonymous" referrerpolicy="no-referrer"  src="-logo.png" class="card-img-top" alt="roblox" loading="lazy">
-            
-                      <div class="card-body">
-                        <p class="card-text">
-            
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </template>
-                <div class="col">
-                  <div class="card shadow-sm" id="Wii-Party">
-                    <img crossorigin="anonymous" referrerpolicy="no-referrer"  src="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/wii_24/SI_Wii_WiiParty.jpg"
-                      class="card-img-top" alt="Wii Party" loading="lazy">
-            
-                    <div class="card-body">
-                      <p class="card-text">
-                        Wii party something we played with my family.
-                        This game makes me competive lol.
-                      </p>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button class="btn bggreen text-white">
-                          <a href="https://en.wikipedia.org/wiki/Wii_Party" class="text-white" rel="noopener">
-                            wikipedia
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>-->
-          </div>
-
-          <!-- FRIENDS LIST -->
-          <div id="my-friends" class="friend list">
-            <h1>My Friends</h1><a onclick="copyNavLink('my-friends')" class="navLinkCopy" href="javascript:void(0)"></a>
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm" id="JustJack">
-
-                  <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                    src="https://yt3.googleusercontent.com/qqBT1QmP2DiHr-tCMDnaH1MWUzT1MvVhncwwWzXIm7hM_GYUfHmi9ltBSGPAeRHthe3J9XU1-Iw=s176-c-k-c0x00ffffff-no-rj"
-                    class="card-img-top" alt="JustJack" loading="lazy">
-
-                  <div class="card-body">
-                    <h1 class="Font-Minecraftia">
-                      JustJack<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                    </h1>
-                    <p class="card-text">
-                      JustJack Is My Friend Jack which is owner of
-                      <button type="button" class="btn btn-sm btn-outline-secondary">
-                        <a target="_blank" rel="noopener" href=" https://block-by-Block-dev-team.github.io"
-                          style="text-decoration: none; color:black">
-                          <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                            src="https://avatars.githubusercontent.com/u/96121929?s=200&amp;v=4" width="50cm"
-                            alt="Block by Block logo" loading="lazy">
-                          Block by Block
-                        </a>
-                      </button> which I am in.
-                    </p>
-                  </div>
-                  <div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group" style="text-decoration: none">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                          <a href="https://www.youtube.com/@JustJackYouTube">
-                            <img referrerpolicy="no-referrer" src="https://www.youtube.com/img/favicon_144.png"
-                              width="50cm" alt="youtube" loading="lazy">
-                            YOUTUBE
-                          </a>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm" id="NatiCreator">
-
-                  <img referrerpolicy="no-referrer" src="https://naticreator.com/assets/img/avataaars.svg"
-                    class="card-img-top" alt="NatiCreator" loading="lazy">
-
-                  <div class="card-body">
-                    <h1 class="Font-Minecraftia">
-                      NatiCreator<a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-                    </h1>
-                    <p class="card-text">
-                      NatiCreator Is My Friend Nathaniel.
-                    </p>
-                  </div>
-                  <a href="naticreator.com">
-                  </a>
-                  <div class="d-flex justify-content-between align-items-center"><a href="naticreator.com">
-                    </a>
-                    <div class="btn-group" style="text-decoration: none"><a href="naticreator.com">
-                      </a><button type="button" class="btn btn-sm btn-outline-secondary"
-                        style="border-radius: 5px 0px 0px 5px;"><a href="naticreator.com">
-                        </a><a href="http://naticreator.com/">
-                          <img referrerpolicy="no-referrer" src="http://naticreator.com/assets/img/avataaars.svg"
-                            width="50cm" alt="website" loading="lazy">
-                          His Homepage
-                        </a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">
-                        <a href="https://www.youtube.com/channel/UCk672yED_Z5u5vTgNY8nlog/">
-                          <img referrerpolicy="no-referrer" src="https://www.youtube.com/img/favicon_144.png"
-                            width="50cm" alt="youtube" loading="lazy">
-                          YOUTUBE
-                        </a>
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <!--<div class="col">
-                  <a href="">
-                      <div class="card shadow-sm" id="roblox">
-                      <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-              <!--<img crossorigin="anonymous" referrerpolicy="no-referrer"  src="roblox-logo.png" class="card-img-top" alt="roblox logo">
-                      
-                      <div class="card-body">
-                        <img crossorigin="anonymous" referrerpolicy="no-referrer"  src="roblox-logo.png" class="card-img-top" alt="roblox logo">
-                        <p class="card-text">
-                          Roblox was my second game the I played. Again I was engage to play because most class mate play this game. I really like this game but in 2022/06/18 it is boring.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                -->
-            </div>
-          </div>
-
-          <!-- ROBLOX GAMES -->
-          <div id="my-rblx-games" class="game list">
-            <h1>My Roblox games</h1><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)"></a>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm" id="rblx-My-flight-game">
-
-                  <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                    src="https://tr.rbxcdn.com/34cd23f9a4fa15b878fe414d733b130f/768/432/Image/Png" class="card-img-top"
-                    alt="My flight game" loading="lazy">
-
-                  <div class="card-body">
-                    <h1 class="Font-Minecraftia">
-                      My flight Game <span
-                        style="background-color: yellow;color: black;font-style: italic;font-size: 60%;"><b>(βeta)</b></span>
-                    </h1><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-                      <p class="card-text">
-                        My flight game! (beta)
-                        <br>
-                        70%? market place models.
-                      </p>
-                    </a>
-                  </div><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-                  </a><button type="button"
-                    class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
-                    data-testid="play-button" style="color: white; width: 100%;" id="play-RBLX-MFG"><a
-                      onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-                      <script>
-                        const MFG = document.getElementById("play-RBLX-MFG").onclick(() => {
-                          window.location.href = "https://rblx.games/11392168488"
-                        })
-                      </script>
-                    </a><a src="https://rblx.games/11392168488">
-                      PLAY
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm" id="rblx-My-obby-game">
-
-                  <img crossorigin="anonymous" referrerpolicy="no-referrer"
-                    src="https://t2.rbxcdn.com/08584ab10b47916f1b94dc93df34e5e4" class="card-img-top" alt="My obby game"
-                    loading="lazy">
-
-                  <div class="card-body">
-                    <h1 class="Font-Minecraftia">
-                      Obby<span
-                        style="background-color: yellow; color: black; font-style: italic; font-size: 60%;"><b>(βeta)</b></span>
-                    </h1><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-                      <p class="card-text">
-                        Made with the RBLX template.
-                      </p>
-                    </a>
-                  </div><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-                  </a><a src="https://rblx.games/11878058995">
-                  </a><button type="button"
-                    class="btn-full-width btn-common-play-game-lg btn-primary-md btn-min-width btn bggreen playBtn"
-                    data-testid="play-button" style="color: white; width: 100%;"><a
-                      src="https://rblx.games/11878058995"></a><a src="https://rblx.games/11878058995">PLAY</a></button>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <h1 id="favorite-youtuber">Favorite Youtuber</h1><a onclick="copyNavLink('')" class="navLinkCopy"
-            href="javascript:void(0)">
-          </a>
-          <p><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-              Favorite Youtuber is a lot so it has a separete page.
-            </a><a href="/favorite youtuber/index.html?from=/">Click Here</a>
-          </p>
-          <h1 id="subed-chan">Subscribed channel</h1>
-          <p>
-            Subscribed channel is a lot so it has a separete page.
-            <a href="/subscribed channels/?from=/">Click Here</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div id="comments"
-      style="background-color: white; border-color: var(--BbB-brown); border-style: dashed; border-radius: 12px; padding: 1%;">
-      <h1>Comments:</h1>
-      <script src="https://giscus.app/client.js" data-repo="mrt-tak/mrt-tak.github.io" data-repo-id="R_kgDOGpG8dw"
-        data-category="comments" data-category-id="DIC_kwDOGpG8d84Cju5-" data-mapping="pathname" data-strict="0"
-        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
-        data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" data-loading="lazy" async>
-        </script>
-      <!-- comment section -->
-      <p style="font-size: 120%; font-weight: bold;">Let's chat! Any questions please post it here.</p>
-      <div class="giscus"></div>
-      <script>
-        function changeGiscusTheme() {
-          console.log("Start changing giscus theme..")
-
-          let theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
-
-          console.log("Target theme: " + theme)
-
-          function sendMessage(message) {
-            const iframe = document.querySelector('iframe.giscus-frame');
-            if (!iframe) console.warn("No giscus-iframe");
-            if (!iframe) return;
-            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-          }
-
-          sendMessage({
-            setConfig: {
-              theme: theme
-            }
-          });
+      <style>
+        .info-card {
+          background: var(--surface, #ffffff);
+          border: 1px solid var(--border, #d6e5bb);
+          border-radius: var(--radius, 4px);
+          padding: 16px;
         }
 
-        console.log("Registering waitForElm...")
-        function waitForElm(selector) {
-          return new Promise(resolve => {
-            if (document.querySelector(selector)) {
-              return resolve(document.querySelector(selector));
-            }
-
-            const observer = new MutationObserver(mutations => {
-              if (document.querySelector(selector)) {
-                observer.disconnect();
-                resolve(document.querySelector(selector));
-              }
-            });
-
-            // If you get "parameter 1 is not of type 'Node'" error, see https://stackoverflow.com/a/77855838/492336
-            observer.observe(document.body, {
-              childList: true,
-              subtree: true
-            });
-          });
+        .link-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 12px 24px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
         }
 
-        console.log("Registering waitForElm promises...")
-        waitForElm('iframe.giscus-frame').then((elm) => {
-          console.log("iframe spawned.")
-          setTimeout(function () {
-            console.log("ping")
-            changeGiscusTheme();
-          }, 1000)
-          setTimeout(function () {
-            console.log("ping")
-            changeGiscusTheme();
-          }, 5000)
-          setTimeout(function () {
-            console.log("ping")
-            changeGiscusTheme();
-          }, 5000)
-        });
-      </script>
-      <!--<script defer disabled>
-      // Function to handle style changes
-      const handleStyleChange = (mutationsList, observer) => {
-          for (const mutation of mutationsList) {
-              if (mutation.type === 'childList') {
-                  // Check if a style tag was added or removed
-                  mutation.addedNodes.forEach(node => {
-                      if (node.tagName === 'STYLE') {
-                          console.log('Style tag added:', node.textContent);
-                          // Add your custom logic here to process the new style
-                      }
-                  });
-                  mutation.removedNodes.forEach(node => {
-                      if (node.tagName === 'STYLE') {
-                          console.log('Style tag removed:', node.textContent);
-                          // Add your custom logic here to handle the removed style
-                      }
-                  });
-              } else if (mutation.type === 'attributes') {
-                  // Check if the style attribute of an element has changed
-                  if (mutation.attributeName === 'style') {
-                      console.log('Style attribute changed:', mutation.target.style.cssText);
-                      // Add your custom logic here to process the style change
-                  }
-              }
-          }
-      };
-  
-      // Create a new MutationObserver instance
-      const observer = new MutationObserver(handleStyleChange);
-  
-      // Select the iframe element by class
-      const iframe = document.querySelector(`iframe.giscus-frame`);
-      alert(iframe.innerHTML)
-  
-      // Configure the observer to watch for style tag changes and attribute changes
-      const config = { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] };
-  
-      // Start observing the iframe
-      observer.observe(iframe, config);
-  </script>-->
-      <script defer>
-        console.log("defer script running..")
-      </script>
+        .link-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 6px 0;
+          border-bottom: 1px dashed var(--border, #d6e5bb);
+        }
 
-      <script>
-        const iframe = document.selector('iframe.giscus-frame');
-        iframe.contentWindow.document.body.style.backgroundColor = 'rgb(255,5,255)';
-        const cssLink = document.createElement("link");
-        cssLink.href = "styles.css";
-        cssLink.rel = "stylesheet";
-        cssLink.type = "text/css";
+        .link-item a {
+          color: var(--accent, #008000);
+          text-decoration: none;
+          font-weight: 600;
+          word-break: break-all;
+        }
 
-        frames['frame1'].contentWindow.document.head.appendChild(cssLink);
-      </script>
-    </div>
-  </main>
+        .link-item a:hover {
+          text-decoration: underline;
+        }
 
-  <footer class="text-muted py-5">
-    <div class="container">
-      <p class="float-end mb-1">
-        <a href="#">Back to top</a>
-      </p>
-      <p class="mb-1">MrT730 HP</p>
-    </div>
-    <!-- copyright and notices --->
-    <div class="container">
-      <p class="mb-0">
-      </p>
-      <h1>MrT730 Programer's edited version of album example</h1><a onclick="copyNavLink('')" class="navLinkCopy"
-        href="javascript:void(0)">
-        <p><b>MrT730</b></p>
-      </a>
-      <p><a onclick="copyNavLink('')" class="navLinkCopy" href="javascript:void(0)">
-        </a><a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/"><img
-            crossorigin="anonymous" referrerpolicy="no-referrer" alt="Creative Commons License" style="border-width:0"
-            src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a><br>This work is
-        licensed under a <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">©
-          Creative Commons
-          Attribution-NonCommercial 4.0 International License</a> unless noted otherwise.
-        <a target="_blank" rel="noopener" href=" /LICENSE.html">CLICK HERE FOR LICCENSE.md</a>.
+        .link-item .handle {
+          color: var(--muted, #4f614c);
+          font-size: 0.8rem;
+          white-space: nowrap;
+          margin-left: 12px;
+        }
+      </style>
+    </main>
 
-        Mainly the images that is from the photographs directory(I mean by page) and subdirectories(I mean by pages
-        inside of /photographs/ pages) are usually licensed under the same license with CC-BY NC(the website's
-        license).
+    <footer class="footer-note">
+      <div>Opinions & photos my own unless otherwise specified (check Alt Text).</div>
+      <div>Photo, other material on this website &copy; "MrT" licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+          style="color: var(--accent);" target="_blank" rel="noopener">CC BY-SA 4.0 Intl</a>.</div>
+      <div>Caution that this website includes more than just my own content, especially for icons, which includes but not limited to Wikimedia files uploaded by the community.</div>
+      <div>Profile splash "MrT" CC BY-SA 4.0 Intl.</div>
+      <div>Website &copy; 2026 "MrT" (MrT-tak) under GNU LGPL v3 | <a href="https://mrt-tak.github.io" style="color: var(--accent);"
+          target="_blank" rel="noopener">mrt-tak.github.io</a></div>
+    </footer>
+  </div>
 
-      </p>
-      <p> © Bootstrap for template</p>
-
-      <h2>Thanks to Mark Otto, Jacob Thornton, and Bootstrap contributors for bootstrap</h2><a onclick="copyNavLink('')"
-        class="navLinkCopy">#</a>
-
-
-      <a href="https://www.flaticon.com/free-icons/rss" title="rss icons">
-        Rss icons created by Ruslan Babkin - Flaticon
-      </a>
-      <p>
-        background image in about me section was made by me using sketch school app
-      </p>
-      <p>
-      </p>
-      <p>Font: Spring is licensed under the 1001Fonts Free For Commercial Use License (FFC)</p>
-      <p class="font-UD"><abbr title="Universal Design">UD</abbr> Font is a font used in Japanese text books</p>
-      <p></p>
-      <a target="_blank" href="https://icons8.com/icon/22028/mail" rel="noopener">Mail icon by Icons8</a>
-      <a target="_blank" href="https://icons8.com/icon/68r18jerXB_P/youtube" rel="noopener">YouTube icon by
-        Icons8</a>
-
-
-
-
-    </div>
-  </footer>
+  <script>
+    const themeToggle = document.querySelector("#theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      const isDark = document.documentElement.dataset.theme !== "dark";
+      document.documentElement.dataset.theme = isDark ? "dark" : "light";
+      themeToggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} theme`);
+    });
+  </script>
 </body>
 
 </html>
